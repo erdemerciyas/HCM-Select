@@ -1,6 +1,6 @@
 # 🎯 RDM Select Component.
 
-Modern, özelleştirilebilir ve erişilebilir select komponenti.
+A modern, customizable, and accessible HTML5 select component with Shadow DOM, advanced validation, and Font Awesome icon support.
 
 ## ✨ Özellikler
 

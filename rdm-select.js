@@ -1083,10 +1083,14 @@ class RdmSelect extends HTMLElement {
 
   _getValidationIcon(state) {
     switch (state) {
-      case 'invalid': return '✖';
-      case 'warning': return '⚠';
-      case 'success': return '✔';
-      default: return '';
+      case 'invalid':
+        return '<i class="fas fa-circle-xmark"></i>';
+      case 'warning':
+        return '<i class="fas fa-triangle-exclamation"></i>';
+      case 'success':
+        return '<i class="fas fa-circle-check"></i>';
+      default:
+        return '';
     }
   }
 }
