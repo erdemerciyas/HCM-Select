@@ -1,6 +1,6 @@
 {
   "name": "hcm-select",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Modern, customizable and accessible select component built with Web Components",
   "main": "hcm-select.js",
   "files": [
