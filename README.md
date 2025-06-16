@@ -1,4 +1,4 @@
-# 🎯 HCM Select Component.
+# 🎯 RDM Select Component.
 
 Modern, özelleştirilebilir ve erişilebilir select komponenti.
 
@@ -28,20 +28,20 @@ Modern, özelleştirilebilir ve erişilebilir select komponenti.
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
 </head>
 <body>
-  <hcm-select label="Ülke Seçin" placeholder="Bir ülke seçin">
-    <hcm-select-option value="tr">Türkiye</hcm-select-option>
-    <hcm-select-option value="us">Amerika Birleşik Devletleri</hcm-select-option>
-    <hcm-select-option value="de">Almanya</hcm-select-option>
-  </hcm-select>
+  <rdm-select label="Ülke Seçin" placeholder="Bir ülke seçin">
+    <rdm-select-option value="tr">Türkiye</rdm-select-option>
+    <rdm-select-option value="us">Amerika Birleşik Devletleri</rdm-select-option>
+    <rdm-select-option value="de">Almanya</rdm-select-option>
+  </rdm-select>
 
-  <script src="hcm-select.js"></script>
+  <script src="rdm-select.js"></script>
 </body>
 </html>
 ```
 
 ### JavaScript ile Seçenekler
 ```javascript
-const select = document.querySelector('hcm-select');
+const select = document.querySelector('rdm-select');
 select.options = [
   { value: 'tr', label: 'Türkiye' },
   { value: 'us', label: 'Amerika Birleşik Devletleri' },
@@ -53,86 +53,86 @@ select.options = [
 
 ### Temel Kullanım
 ```html
-<hcm-select 
+<rdm-select 
   label="Şehir" 
   placeholder="Şehir seçin"
   clearable>
-  <hcm-select-option value="istanbul">İstanbul</hcm-select-option>
-  <hcm-select-option value="ankara">Ankara</hcm-select-option>
-  <hcm-select-option value="izmir">İzmir</hcm-select-option>
-</hcm-select>
+  <rdm-select-option value="istanbul">İstanbul</rdm-select-option>
+  <rdm-select-option value="ankara">Ankara</rdm-select-option>
+  <rdm-select-option value="izmir">İzmir</rdm-select-option>
+</rdm-select>
 ```
 
 ### Icon ile Kullanım
 ```html
 <!-- Emoji Icon -->
-<hcm-select 
+<rdm-select 
   label="Kategori" 
   placeholder="Kategori seçin"
   icon="📁"
   icon-position="left">
-  <hcm-select-option value="tech">Teknoloji</hcm-select-option>
-  <hcm-select-option value="design">Tasarım</hcm-select-option>
-</hcm-select>
+  <rdm-select-option value="tech">Teknoloji</rdm-select-option>
+  <rdm-select-option value="design">Tasarım</rdm-select-option>
+</rdm-select>
 
 <!-- Font Awesome Icon -->
-<hcm-select 
+<rdm-select 
   label="Kullanıcı" 
   placeholder="Kullanıcı seçin"
   icon-class="fas fa-user"
   icon-position="left">
-  <hcm-select-option value="admin">Admin</hcm-select-option>
-  <hcm-select-option value="user">Kullanıcı</hcm-select-option>
-</hcm-select>
+  <rdm-select-option value="admin">Admin</rdm-select-option>
+  <rdm-select-option value="user">Kullanıcı</rdm-select-option>
+</rdm-select>
 ```
 
 ### Arama Özelliği
 ```html
-<hcm-select 
+<rdm-select 
   label="Programlama Dili" 
   placeholder="Dil seçin"
   search-bar
   search-bar-placeholder="Dil ara..."
   search-not-found-text="Sonuç bulunamadı">
-  <hcm-select-option value="js">JavaScript</hcm-select-option>
-  <hcm-select-option value="py">Python</hcm-select-option>
-  <hcm-select-option value="java">Java</hcm-select-option>
-</hcm-select>
+  <rdm-select-option value="js">JavaScript</rdm-select-option>
+  <rdm-select-option value="py">Python</rdm-select-option>
+  <rdm-select-option value="java">Java</rdm-select-option>
+</rdm-select>
 ```
 
 ### Çoklu Seçim
 ```html
-<hcm-select 
+<rdm-select 
   label="Hobiler" 
   placeholder="Hobiler seçin"
   multiple
   option-style="checkbox">
-  <hcm-select-option value="reading">Okuma</hcm-select-option>
-  <hcm-select-option value="music">Müzik</hcm-select-option>
-  <hcm-select-option value="sports">Spor</hcm-select-option>
-</hcm-select>
+  <rdm-select-option value="reading">Okuma</rdm-select-option>
+  <rdm-select-option value="music">Müzik</rdm-select-option>
+  <rdm-select-option value="sports">Spor</rdm-select-option>
+</rdm-select>
 ```
 
 ### Validasyon Durumları
 ```html
 <!-- Hata Durumu -->
-<hcm-select 
+<rdm-select 
   label="Gerekli Alan" 
   placeholder="Seçim yapın"
   validation-state="invalid"
   invalid-text="Bu alan zorunludur!"
   required>
-  <hcm-select-option value="1">Seçenek 1</hcm-select-option>
-</hcm-select>
+  <rdm-select-option value="1">Seçenek 1</rdm-select-option>
+</rdm-select>
 
 <!-- Başarı Durumu -->
-<hcm-select 
+<rdm-select 
   label="Onaylandı" 
   placeholder="Seçim yapın"
   validation-state="success"
   success-text="Seçim onaylandı!">
-  <hcm-select-option value="1">Seçenek 1</hcm-select-option>
-</hcm-select>
+  <rdm-select-option value="1">Seçenek 1</rdm-select-option>
+</rdm-select>
 ```
 
 ## 🔧 Attribute Referansı
@@ -166,7 +166,7 @@ select.options = [
 
 ### Metodlar
 ```javascript
-const select = document.querySelector('hcm-select');
+const select = document.querySelector('rdm-select');
 
 // Dropdown'ı aç/kapat
 select.open();
@@ -191,7 +191,7 @@ select.options = [
 
 ### Event Dinleme
 ```javascript
-select.addEventListener('hcm-select', (e) => {
+select.addEventListener('rdm-select', (e) => {
   console.log('Seçilen değer:', e.detail.value);
   console.log('Seçilen label:', e.detail.label);
 });
@@ -201,12 +201,12 @@ select.addEventListener('hcm-select', (e) => {
 
 ### CSS Custom Properties
 ```css
-hcm-select {
-  --hcm-select-border-color: #d1d5db;
-  --hcm-select-focus-color: #3b82f6;
-  --hcm-select-error-color: #ef4444;
-  --hcm-select-success-color: #10b981;
-  --hcm-select-warning-color: #f59e0b;
+rdm-select {
+  --rdm-select-border-color: #d1d5db;
+  --rdm-select-focus-color: #3b82f6;
+  --rdm-select-error-color: #ef4444;
+  --rdm-select-success-color: #10b981;
+  --rdm-select-warning-color: #f59e0b;
 }
 ```
 
@@ -226,16 +226,16 @@ hcm-select {
 
 ### CDN
 ```html
-<script src="https://unpkg.com/hcm-select@latest/hcm-select.js"></script>
+<script src="https://unpkg.com/rdm-select@latest/rdm-select.js"></script>
 ```
 
 ### NPM
 ```bash
-npm install hcm-select
+npm install rdm-select
 ```
 
 ### Manuel
-1. `hcm-select.js` dosyasını indirin
+1. `rdm-select.js` dosyasını indirin
 2. HTML sayfanızda script tag ile ekleyin
 3. Font Awesome için CSS linkini ekleyin (isteğe bağlı)
 

@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>HCM Select Demo</title>
+  <title>RDM Select Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
@@ -10,9 +10,9 @@
 </head>
 <body>
   <header style="text-align:center; margin: 32px 0 16px;">
-    <h1>HCM Select Demo</h1>
+    <h1>RDM Select Demo</h1>
     <p>Modern, özelleştirilebilir ve erişilebilir bir select komponenti.<br>Yapımcı: <b>Erdem Erciyas</b></p>
-    <a href="https://github.com/erdemerciyas/HCM-Select" target="_blank" style="display:inline-block;margin-top:10px;color:#2563eb;font-weight:500;text-decoration:none;">Kaynak kodu: GitHub</a>
+    <a href="https://github.com/erdemerciyas/RDM-Select" target="_blank" style="display:inline-block;margin-top:10px;color:#2563eb;font-weight:500;text-decoration:none;">Kaynak kodu: GitHub</a>
   </header>
 
   <section style="max-width: 480px; margin: 0 auto 32px auto; padding: 24px; background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
@@ -140,7 +140,7 @@ basicSelect.options = [
             clearable>
             <option value="1">Seçenek 1</option>
             <option value="2">Seçenek 2</option>
-          </hcm-select>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -149,36 +149,36 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   size="large" 
   label="Büyük Select" 
   placeholder="Büyük boyut"
   clearable&gt;
   &lt;option value="1"&gt;Seçenek 1&lt;/option&gt;
   &lt;option value="2"&gt;Seçenek 2&lt;/option&gt;
-&lt;/hcm-select&gt;</pre>
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Devre Dışı</h4>
-          <hcm-select disabled 
+          <rdm-select disabled 
             label="Devre Dışı Select" 
             placeholder="Kullanılamaz">
             <option value="1">Seçenek 1</option>
-          </hcm-select>
+          </rdm-select>
         </div>
 
         <div class="demo-item">
           <h4>Label Olmadan</h4>
-          <hcm-select 
+          <rdm-select 
             placeholder="Sadece placeholder"
             clearable>
-            <hcm-select-option value="opt1">Seçenek 1</hcm-select-option>
-            <hcm-select-option value="opt2">Seçenek 2</hcm-select-option>
-            <hcm-select-option value="opt3">Seçenek 3</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="opt1">Seçenek 1</rdm-select-option>
+            <rdm-select-option value="opt2">Seçenek 2</rdm-select-option>
+            <rdm-select-option value="opt3">Seçenek 3</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -187,27 +187,27 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   placeholder="Sadece placeholder"
   clearable&gt;
-  &lt;hcm-select-option value="opt1"&gt;Seçenek 1&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="opt2"&gt;Seçenek 2&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="opt3"&gt;Seçenek 3&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="opt1"&gt;Seçenek 1&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="opt2"&gt;Seçenek 2&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="opt3"&gt;Seçenek 3&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Hata Durumu</h4>
-          <hcm-select label="Gerekli Alan" 
+          <rdm-select label="Gerekli Alan" 
             placeholder="Seçim yapın"
             required
             invalid-text="Bu alan zorunludur!"
             clearable>
             <option value="1">Seçenek 1</option>
             <option value="2">Seçenek 2</option>
-          </hcm-select>
+          </rdm-select>
         </div>
       </div>
     </div>
@@ -218,16 +218,16 @@ basicSelect.options = [
       <div class="demo-grid">
         <div class="demo-item">
           <h4>Sol Icon</h4>
-          <hcm-select 
+          <rdm-select 
             label="Ülke Seçin" 
             placeholder="Ülke seçin"
             icon="🌍"
             icon-position="left">
-            <hcm-select-option value="tr">Türkiye</hcm-select-option>
-            <hcm-select-option value="us">Amerika</hcm-select-option>
-            <hcm-select-option value="de">Almanya</hcm-select-option>
-            <hcm-select-option value="fr">Fransa</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="tr">Türkiye</rdm-select-option>
+            <rdm-select-option value="us">Amerika</rdm-select-option>
+            <rdm-select-option value="de">Almanya</rdm-select-option>
+            <rdm-select-option value="fr">Fransa</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -236,31 +236,31 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="Ülke Seçin" 
   placeholder="Ülke seçin"
   icon="🌍"
   icon-position="left"&gt;
-  &lt;hcm-select-option value="tr"&gt;Türkiye&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="us"&gt;Amerika&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="de"&gt;Almanya&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="fr"&gt;Fransa&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="tr"&gt;Türkiye&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="us"&gt;Amerika&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="de"&gt;Almanya&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="fr"&gt;Fransa&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Sağ Icon</h4>
-          <hcm-select 
+          <rdm-select 
             label="Kategori" 
             placeholder="Kategori seçin"
             icon="📁"
             icon-position="right">
-            <hcm-select-option value="tech">Teknoloji</hcm-select-option>
-            <hcm-select-option value="design">Tasarım</hcm-select-option>
-            <hcm-select-option value="marketing">Pazarlama</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="tech">Teknoloji</rdm-select-option>
+            <rdm-select-option value="design">Tasarım</rdm-select-option>
+            <rdm-select-option value="marketing">Pazarlama</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -269,31 +269,31 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="Kategori" 
   placeholder="Kategori seçin"
   icon="📁"
   icon-position="right"&gt;
-  &lt;hcm-select-option value="tech"&gt;Teknoloji&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="design"&gt;Tasarım&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="marketing"&gt;Pazarlama&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="tech"&gt;Teknoloji&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="design"&gt;Tasarım&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="marketing"&gt;Pazarlama&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Kullanıcı Icon (Font Awesome)</h4>
-          <hcm-select 
+          <rdm-select 
             label="Kullanıcı Tipi" 
             placeholder="Tip seçin"
             icon-class="fas fa-user"
             icon-position="left"
             size="large">
-            <hcm-select-option value="admin">Admin</hcm-select-option>
-            <hcm-select-option value="user">Kullanıcı</hcm-select-option>
-            <hcm-select-option value="guest">Misafir</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="admin">Admin</rdm-select-option>
+            <rdm-select-option value="user">Kullanıcı</rdm-select-option>
+            <rdm-select-option value="guest">Misafir</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -302,33 +302,33 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="Kullanıcı Tipi" 
   placeholder="Tip seçin"
   icon-class="fas fa-user"
   icon-position="left"
   size="large"&gt;
-  &lt;hcm-select-option value="admin"&gt;Admin&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="user"&gt;Kullanıcı&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="guest"&gt;Misafir&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="admin"&gt;Admin&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="user"&gt;Kullanıcı&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="guest"&gt;Misafir&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Para Birimi (Font Awesome)</h4>
-          <hcm-select 
+          <rdm-select 
             label="Para Birimi" 
             placeholder="Para birimi seçin"
             icon-class="fas fa-dollar-sign"
             icon-position="left"
             clearable>
-            <hcm-select-option value="try">TRY - Türk Lirası</hcm-select-option>
-            <hcm-select-option value="usd">USD - Amerikan Doları</hcm-select-option>
-            <hcm-select-option value="eur">EUR - Euro</hcm-select-option>
-            <hcm-select-option value="gbp">GBP - İngiliz Sterlini</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="try">TRY - Türk Lirası</rdm-select-option>
+            <rdm-select-option value="usd">USD - Amerikan Doları</rdm-select-option>
+            <rdm-select-option value="eur">EUR - Euro</rdm-select-option>
+            <rdm-select-option value="gbp">GBP - İngiliz Sterlini</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -337,34 +337,34 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="Para Birimi" 
   placeholder="Para birimi seçin"
   icon-class="fas fa-dollar-sign"
   icon-position="left"
   clearable&gt;
-  &lt;hcm-select-option value="try"&gt;TRY - Türk Lirası&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="usd"&gt;USD - Amerikan Doları&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="eur"&gt;EUR - Euro&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="gbp"&gt;GBP - İngiliz Sterlini&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="try"&gt;TRY - Türk Lirası&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="usd"&gt;USD - Amerikan Doları&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="eur"&gt;EUR - Euro&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="gbp"&gt;GBP - İngiliz Sterlini&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Zaman Dilimi (Sağ Icon)</h4>
-          <hcm-select 
+          <rdm-select 
             label="Zaman Dilimi" 
             placeholder="Zaman dilimi seçin"
             icon-class="fas fa-clock"
             icon-position="right"
             search-bar>
-            <hcm-select-option value="ist">İstanbul (UTC+3)</hcm-select-option>
-            <hcm-select-option value="utc">UTC (UTC+0)</hcm-select-option>
-            <hcm-select-option value="est">New York (UTC-5)</hcm-select-option>
-            <hcm-select-option value="pst">Los Angeles (UTC-8)</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="ist">İstanbul (UTC+3)</rdm-select-option>
+            <rdm-select-option value="utc">UTC (UTC+0)</rdm-select-option>
+            <rdm-select-option value="est">New York (UTC-5)</rdm-select-option>
+            <rdm-select-option value="pst">Los Angeles (UTC-8)</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -373,33 +373,33 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="Zaman Dilimi" 
   placeholder="Zaman dilimi seçin"
   icon-class="fas fa-clock"
   icon-position="right"
   search-bar&gt;
-  &lt;hcm-select-option value="ist"&gt;İstanbul (UTC+3)&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="utc"&gt;UTC (UTC+0)&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="est"&gt;New York (UTC-5)&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="pst"&gt;Los Angeles (UTC-8)&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="ist"&gt;İstanbul (UTC+3)&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="utc"&gt;UTC (UTC+0)&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="est"&gt;New York (UTC-5)&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="pst"&gt;Los Angeles (UTC-8)&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>E-posta (Label Olmadan)</h4>
-          <hcm-select 
+          <rdm-select 
             placeholder="E-posta sağlayıcısı seçin"
             icon-class="fas fa-envelope"
             icon-position="left"
             clearable>
-            <hcm-select-option value="gmail">Gmail</hcm-select-option>
-            <hcm-select-option value="outlook">Outlook</hcm-select-option>
-            <hcm-select-option value="yahoo">Yahoo Mail</hcm-select-option>
-            <hcm-select-option value="icloud">iCloud Mail</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="gmail">Gmail</rdm-select-option>
+            <rdm-select-option value="outlook">Outlook</rdm-select-option>
+            <rdm-select-option value="yahoo">Yahoo Mail</rdm-select-option>
+            <rdm-select-option value="icloud">iCloud Mail</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -408,35 +408,35 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   placeholder="E-posta sağlayıcısı seçin"
   icon-class="fas fa-envelope"
   icon-position="left"
   clearable&gt;
-  &lt;hcm-select-option value="gmail"&gt;Gmail&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="outlook"&gt;Outlook&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="yahoo"&gt;Yahoo Mail&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="icloud"&gt;iCloud Mail&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="gmail"&gt;Gmail&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="outlook"&gt;Outlook&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="yahoo"&gt;Yahoo Mail&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="icloud"&gt;iCloud Mail&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Çoklu Seçim + Icon</h4>
-          <hcm-select 
+          <rdm-select 
             label="Diller" 
             placeholder="Dil seçin"
             icon="🗣️"
             icon-position="left"
             multiple
             option-style="checkbox">
-            <hcm-select-option value="tr">Türkçe</hcm-select-option>
-            <hcm-select-option value="en">English</hcm-select-option>
-            <hcm-select-option value="de">Deutsch</hcm-select-option>
-            <hcm-select-option value="fr">Français</hcm-select-option>
-            <hcm-select-option value="es">Español</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="tr">Türkçe</rdm-select-option>
+            <rdm-select-option value="en">English</rdm-select-option>
+            <rdm-select-option value="de">Deutsch</rdm-select-option>
+            <rdm-select-option value="fr">Français</rdm-select-option>
+            <rdm-select-option value="es">Español</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -445,19 +445,19 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="Diller" 
   placeholder="Dil seçin"
   icon="🗣️"
   icon-position="left"
   multiple
   option-style="checkbox"&gt;
-  &lt;hcm-select-option value="tr"&gt;Türkçe&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="en"&gt;English&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="de"&gt;Deutsch&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="fr"&gt;Français&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="es"&gt;Español&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="tr"&gt;Türkçe&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="en"&gt;English&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="de"&gt;Deutsch&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="fr"&gt;Français&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="es"&gt;Español&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
@@ -469,7 +469,7 @@ basicSelect.options = [
       <div class="demo-grid">
         <div class="demo-item">
           <h4>Hata Durumu</h4>
-          <hcm-select label="E-posta Adresi" 
+          <rdm-select label="E-posta Adresi" 
             placeholder="E-posta girin"
             required
             validation-state="invalid"
@@ -478,7 +478,7 @@ basicSelect.options = [
             <option value="invalid@">invalid@</option>
             <option value="test@example.com">test@example.com</option>
             <option value="user@domain.org">user@domain.org</option>
-          </hcm-select>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -487,7 +487,7 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="E-posta Adresi" 
   placeholder="E-posta girin"
   required
@@ -497,14 +497,14 @@ basicSelect.options = [
   &lt;option value="invalid@"&gt;invalid@&lt;/option&gt;
   &lt;option value="test@example.com"&gt;test@example.com&lt;/option&gt;
   &lt;option value="user@domain.org"&gt;user@domain.org&lt;/option&gt;
-&lt;/hcm-select&gt;</pre>
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Uyarı Durumu</h4>
-          <hcm-select label="Şifre Gücü" 
+          <rdm-select label="Şifre Gücü" 
             placeholder="Şifre gücü seçin"
             validation-state="warning"
             warning-text="Güçlü şifre önerilir!"
@@ -512,7 +512,7 @@ basicSelect.options = [
             <option value="weak">Zayıf</option>
             <option value="medium">Orta</option>
             <option value="strong">Güçlü</option>
-          </hcm-select>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -521,7 +521,7 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="Şifre Gücü" 
   placeholder="Şifre gücü seçin"
   validation-state="warning"
@@ -530,14 +530,14 @@ basicSelect.options = [
   &lt;option value="weak"&gt;Zayıf&lt;/option&gt;
   &lt;option value="medium"&gt;Orta&lt;/option&gt;
   &lt;option value="strong"&gt;Güçlü&lt;/option&gt;
-&lt;/hcm-select&gt;</pre>
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Başarı Durumu</h4>
-          <hcm-select label="Doğrulama Durumu" 
+          <rdm-select label="Doğrulama Durumu" 
             placeholder="Durum seçin"
             validation-state="success"
             success-text="Başarıyla doğrulandı!"
@@ -546,12 +546,12 @@ basicSelect.options = [
             <option value="pending">Beklemede</option>
             <option value="verified">Doğrulandı</option>
             <option value="rejected">Reddedildi</option>
-          </hcm-select>
+          </rdm-select>
         </div>
 
         <div class="demo-item">
           <h4>Zorunlu Alan</h4>
-          <hcm-select label="Ülke" 
+          <rdm-select label="Ülke" 
             placeholder="Ülke seçin"
             required
             help-text="Bu alan zorunludur"
@@ -559,24 +559,24 @@ basicSelect.options = [
             <option value="tr">Türkiye</option>
             <option value="us">Amerika</option>
             <option value="de">Almanya</option>
-          </hcm-select>
+          </rdm-select>
         </div>
 
         <div class="demo-item">
           <h4>Custom Mesajlar</h4>
-          <hcm-select label="Özel Validation" 
+          <rdm-select label="Özel Validation" 
             placeholder="Seçim yapın"
             validation-state="invalid"
             invalid-text="Özel hata mesajı: Bu seçim geçersiz!"
             clearable>
             <option value="option1">Seçenek 1</option>
             <option value="option2">Seçenek 2</option>
-          </hcm-select>
+          </rdm-select>
         </div>
 
         <div class="demo-item">
           <h4>Dinamik Validation</h4>
-          <hcm-select id="dynamic-validation"
+          <rdm-select id="dynamic-validation"
             label="Dinamik Durum" 
             placeholder="Bir seçenek seçin"
             help-text="Seçiminize göre validation değişir"
@@ -584,7 +584,7 @@ basicSelect.options = [
             <option value="good">İyi Seçim</option>
             <option value="warning">Uyarı Seçimi</option>
             <option value="bad">Kötü Seçim</option>
-          </hcm-select>
+          </rdm-select>
         </div>
       </div>
     </div>
@@ -594,14 +594,14 @@ basicSelect.options = [
       <div class="demo-grid">
         <div class="demo-item">
           <h4>Arama Özellikli</h4>
-          <hcm-select id="search-select"
+          <rdm-select id="search-select"
             label="Programlama Dili" 
             placeholder="Dil seçin"
             search-bar
             search-bar-placeholder="Dil ara..."
             search-not-found-text="Sonuç bulunamadı"
             clearable>
-          </hcm-select>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -610,14 +610,14 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select id="search-select"
+              <pre class="code-preview__code">&lt;rdm-select id="search-select"
   label="Programlama Dili" 
   placeholder="Dil seçin"
   search-bar
   search-bar-placeholder="Dil ara..."
   search-not-found-text="Sonuç bulunamadı"
   clearable&gt;
-&lt;/hcm-select&gt;
+&lt;/rdm-select&gt;
 
 &lt;script&gt;
 const searchSelect = document.getElementById('search-select');
@@ -642,15 +642,15 @@ searchSelect.options = [
 
         <div class="demo-item">
           <h4>Yardım Metni ile</h4>
-          <hcm-select label="Deneyim Seviyesi" 
+          <rdm-select label="Deneyim Seviyesi" 
             placeholder="Seviye seçin"
             help-text="Mevcut deneyim seviyenizi seçin"
             clearable>
-            <hcm-select-option value="beginner">Başlangıç</hcm-select-option>
-            <hcm-select-option value="intermediate">Orta</hcm-select-option>
-            <hcm-select-option value="advanced">İleri</hcm-select-option>
-            <hcm-select-option value="expert">Uzman</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="beginner">Başlangıç</rdm-select-option>
+            <rdm-select-option value="intermediate">Orta</rdm-select-option>
+            <rdm-select-option value="advanced">İleri</rdm-select-option>
+            <rdm-select-option value="expert">Uzman</rdm-select-option>
+          </rdm-select>
         </div>
       </div>
     </div>
@@ -660,27 +660,27 @@ searchSelect.options = [
       <div class="demo-grid">
         <div class="demo-item">
           <h4>Border Olmadan (Varsayılan)</h4>
-          <hcm-select name="no-borders" 
+          <rdm-select name="no-borders" 
             label="Standart Görünüm"
             placeholder="Seçenek seçin">
-            <hcm-select-option value="option1">Seçenek 1</hcm-select-option>
-            <hcm-select-option value="option2">Seçenek 2</hcm-select-option>
-            <hcm-select-option value="option3">Seçenek 3</hcm-select-option>
-            <hcm-select-option value="option4">Seçenek 4</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="option1">Seçenek 1</rdm-select-option>
+            <rdm-select-option value="option2">Seçenek 2</rdm-select-option>
+            <rdm-select-option value="option3">Seçenek 3</rdm-select-option>
+            <rdm-select-option value="option4">Seçenek 4</rdm-select-option>
+          </rdm-select>
         </div>
         
         <div class="demo-item">
           <h4>Border ile</h4>
-          <hcm-select name="with-borders" 
+          <rdm-select name="with-borders" 
             label="Çizgili Görünüm"
             placeholder="Seçenek seçin" 
             option-borders>
-            <hcm-select-option value="option1">Seçenek 1</hcm-select-option>
-            <hcm-select-option value="option2">Seçenek 2</hcm-select-option>
-            <hcm-select-option value="option3">Seçenek 3</hcm-select-option>
-            <hcm-select-option value="option4">Seçenek 4</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="option1">Seçenek 1</rdm-select-option>
+            <rdm-select-option value="option2">Seçenek 2</rdm-select-option>
+            <rdm-select-option value="option3">Seçenek 3</rdm-select-option>
+            <rdm-select-option value="option4">Seçenek 4</rdm-select-option>
+          </rdm-select>
         </div>
       </div>
     </div>
@@ -690,7 +690,7 @@ searchSelect.options = [
       <div class="demo-grid">
         <div class="demo-item">
           <h4>Checkbox Stili</h4>
-          <hcm-select name="checkbox-style" 
+          <rdm-select name="checkbox-style" 
             label="Checkbox Görünüm"
             placeholder="Seçenekleri işaretle" 
             option-style="checkbox"
@@ -701,7 +701,7 @@ searchSelect.options = [
             <option value="react">React</option>
             <option value="vue">Vue.js</option>
             <option value="angular">Angular</option>
-          </hcm-select>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -710,7 +710,7 @@ searchSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   name="checkbox-style" 
   label="Checkbox Görünüm"
   placeholder="Seçenekleri işaretle" 
@@ -722,14 +722,14 @@ searchSelect.options = [
   &lt;option value="react"&gt;React&lt;/option&gt;
   &lt;option value="vue"&gt;Vue.js&lt;/option&gt;
   &lt;option value="angular"&gt;Angular&lt;/option&gt;
-&lt;/hcm-select&gt;</pre>
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
         
         <div class="demo-item">
           <h4>Radio Stili</h4>
-          <hcm-select name="radio-style" 
+          <rdm-select name="radio-style" 
             label="Radio Görünüm"
             placeholder="Bir seçenek seç" 
             option-style="radio">
@@ -738,12 +738,12 @@ searchSelect.options = [
             <option value="advanced">İleri</option>
             <option value="expert">Uzman</option>
             <option value="master">Master</option>
-          </hcm-select>
+          </rdm-select>
         </div>
 
         <div class="demo-item">
           <h4>Checkbox + Border</h4>
-          <hcm-select name="checkbox-border" 
+          <rdm-select name="checkbox-border" 
             label="Checkbox + Çizgi"
             placeholder="Çoklu seçim" 
             option-style="checkbox"
@@ -755,12 +755,12 @@ searchSelect.options = [
             <option value="mobile">Mobile Development</option>
             <option value="devops">DevOps</option>
             <option value="ui">UI/UX Design</option>
-          </hcm-select>
+          </rdm-select>
         </div>
 
         <div class="demo-item">
           <h4>Radio + Border</h4>
-          <hcm-select name="radio-border" 
+          <rdm-select name="radio-border" 
             label="Radio + Çizgi"
             placeholder="Tek seçim" 
             option-style="radio"
@@ -771,7 +771,7 @@ searchSelect.options = [
             <option value="lead">Lead Developer</option>
             <option value="architect">Software Architect</option>
             <option value="manager">Engineering Manager</option>
-          </hcm-select>
+          </rdm-select>
         </div>
       </div>
     </div>
@@ -781,14 +781,14 @@ searchSelect.options = [
       <div class="demo-grid">
         <div class="demo-item">
           <h4>API Metodları</h4>
-          <hcm-select id="api-select" 
+          <rdm-select id="api-select" 
             label="Kontrol Edilebilir Select" 
             placeholder="Seçim yapın"
             clearable>
-            <hcm-select-option value="red">Kırmızı</hcm-select-option>
-            <hcm-select-option value="green">Yeşil</hcm-select-option>
-            <hcm-select-option value="blue">Mavi</hcm-select-option>
-          </hcm-select>
+            <rdm-select-option value="red">Kırmızı</rdm-select-option>
+            <rdm-select-option value="green">Yeşil</rdm-select-option>
+            <rdm-select-option value="blue">Mavi</rdm-select-option>
+          </rdm-select>
           
           <div class="button-group">
             <button class="btn" onclick="apiSelect.open()">Aç</button>
@@ -807,14 +807,14 @@ searchSelect.options = [
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
               <pre class="code-preview__code">&lt;!-- HTML --&gt;
-&lt;hcm-select id="api-select" 
+&lt;rdm-select id="api-select" 
   label="Kontrol Edilebilir Select" 
   placeholder="Seçim yapın"
   clearable&gt;
-  &lt;hcm-select-option value="red"&gt;Kırmızı&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="green"&gt;Yeşil&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="blue"&gt;Mavi&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;
+  &lt;rdm-select-option value="red"&gt;Kırmızı&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="green"&gt;Yeşil&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="blue"&gt;Mavi&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;
 
 &lt;div class="button-group"&gt;
   &lt;button onclick="apiSelect.open()"&gt;Aç&lt;/button&gt;
@@ -827,7 +827,7 @@ searchSelect.options = [
 &lt;script&gt;
 const apiSelect = document.getElementById('api-select');
 
-apiSelect.addEventListener('hcm-select', (e) =&gt; {
+apiSelect.addEventListener('rdm-select', (e) =&gt; {
   console.log('Seçilen değer:', e.detail.value);
 });
 &lt;/script&gt;</pre>
@@ -839,10 +839,10 @@ apiSelect.addEventListener('hcm-select', (e) =&gt; {
   </main>
 
   <footer style="text-align:center; margin: 40px 0 16px; color: #64748b; font-size: 15px;">
-    <span>© 2024 HCM Select | Yapımcı: Erdem Erciyas | <a href="https://github.com/erdemerciyas/HCM-Select" target="_blank" style="color:#2563eb;">GitHub</a></span>
+    <span>© 2024 RDM Select | Yapımcı: Erdem Erciyas | <a href="https://github.com/erdemerciyas/RDM-Select" target="_blank" style="color:#2563eb;">GitHub</a></span>
   </footer>
 
-  <script src="hcm-select.js"></script>
+  <script src="rdm-select.js"></script>
   <script>
     // Temel select için options ayarla
     const basicSelect = document.getElementById('basic-select');
@@ -876,17 +876,17 @@ apiSelect.addEventListener('hcm-select', (e) =&gt; {
     const apiSelect = document.getElementById('api-select');
 
     // Event listeners
-    basicSelect.addEventListener('hcm-select', (e) => {
+    basicSelect.addEventListener('rdm-select', (e) => {
       document.getElementById('basic-result').textContent = `Seçilen: ${e.detail.value || '-'}`;
     });
 
-    apiSelect.addEventListener('hcm-select', (e) => {
+    apiSelect.addEventListener('rdm-select', (e) => {
       document.getElementById('api-result').textContent = `Seçilen: ${e.detail.value || '-'}`;
     });
 
     // Dinamik validation örneği
     const dynamicValidation = document.getElementById('dynamic-validation');
-    dynamicValidation.addEventListener('hcm-select', (e) => {
+    dynamicValidation.addEventListener('rdm-select', (e) => {
       const value = e.detail.value;
       
       if (value === 'good') {
@@ -913,7 +913,7 @@ apiSelect.addEventListener('hcm-select', (e) =&gt; {
     });
 
     // Tüm select'lere genel event listener
-    document.addEventListener('hcm-select', (e) => {
+    document.addEventListener('rdm-select', (e) => {
       console.log('Select değişti:', e.detail);
     });
 
@@ -975,7 +975,7 @@ apiSelect.addEventListener('hcm-select', (e) =&gt; {
   <!-- Attribute Referans Tablosu -->
   <div class="demo-section">
     <h3>Attribute Referansı</h3>
-    <p>hcm-select bileşeninde kullanabileceğiniz tüm attribute'lar ve açıklamaları:</p>
+    <p>rdm-select bileşeninde kullanabileceğiniz tüm attribute'lar ve açıklamaları:</p>
     
     <div class="table-container">
       <table class="reference-table">
@@ -1048,7 +1048,7 @@ apiSelect.addEventListener('hcm-select', (e) =&gt; {
     <div style="margin-top: 20px; padding: 20px; background: #fef3c7; border-radius: 8px; border-left: 4px solid #f59e0b;">
       <h3 style="margin: 0 0 10px 0; color: #92400e; font-size: 18px;">Event Dinleme</h3>
       <code style="background: #fbbf24; color: #92400e; padding: 8px 12px; border-radius: 4px; display: block; font-size: 14px;">
-        element.addEventListener('hcm-select', (e) => {<br>
+        element.addEventListener('rdm-select', (e) => {<br>
         &nbsp;&nbsp;console.log('Seçilen değer:', e.detail.value);<br>
         });
       </code>

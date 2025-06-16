@@ -1,10 +1,10 @@
 {
-  "name": "hcm-select",
+  "name": "rdm-select",
   "version": "1.0.4",
-  "description": "Modern, customizable and accessible select component built with Web Components",
-  "main": "hcm-select.js",
+  "description": "Modern, customizable and accessible select component built with Web Components (RDM Select)",
+  "main": "rdm-select.js",
   "files": [
-    "hcm-select.js",
+    "rdm-select.js",
     "style.css",
     "index.html",
     "README.md"
@@ -25,12 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/hcm-select.git"
+    "url": "https://github.com/your-username/rdm-select.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/hcm-select/issues"
+    "url": "https://github.com/your-username/rdm-select/issues"
   },
-  "homepage": "https://github.com/your-username/hcm-select#readme",
+  "homepage": "https://github.com/your-username/rdm-select#readme",
   "scripts": {
     "start": "python -m http.server 8000",
     "serve": "npx http-server -p 8000",
