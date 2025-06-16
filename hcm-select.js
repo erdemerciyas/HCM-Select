@@ -1,4 +1,4 @@
-class HcmSelect extends HTMLElement {
+class RdmSelect extends HTMLElement {
   static get observedAttributes() {
     return [
       'name', 'value', 'label', 'placeholder', 'size', 'required', 'disabled', 
@@ -84,8 +84,8 @@ class HcmSelect extends HTMLElement {
   }
 
   _parseSlottedOptions() {
-    // Try hcm-select-option first, then regular option tags
-    let slottedOptions = this.querySelectorAll('hcm-select-option');
+    // Try rdm-select-option first, then regular option tags
+    let slottedOptions = this.querySelectorAll('rdm-select-option');
     if (slottedOptions.length === 0) {
       slottedOptions = this.querySelectorAll('option');
     }
@@ -136,13 +136,13 @@ class HcmSelect extends HTMLElement {
           contain: layout style;
         }
 
-        .hcm-select {
+        .rdm-select {
           position: relative;
           width: 100%;
           z-index: auto;
         }
 
-        .hcm-select__label {
+        .rdm-select__label {
           display: block;
           min-height: 20px;
           margin-bottom: 8px;
@@ -151,16 +151,16 @@ class HcmSelect extends HTMLElement {
           color: #374151;
         }
 
-        .hcm-select__label--hidden {
+        .rdm-select__label--hidden {
           visibility: hidden;
         }
 
-        .hcm-select__label--required::after {
+        .rdm-select__label--required::after {
           content: ' *';
           color: #ef4444;
         }
 
-        .hcm-select__trigger {
+        .rdm-select__trigger {
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -176,46 +176,46 @@ class HcmSelect extends HTMLElement {
           transform: translateZ(0);
         }
 
-        .hcm-select__trigger:hover:not(.hcm-select__trigger--disabled) {
+        .rdm-select__trigger:hover:not(.rdm-select__trigger--disabled) {
           border-color: ${this._getHoverBorderColor(validationState)};
         }
 
-        .hcm-select__trigger:focus {
+        .rdm-select__trigger:focus {
           outline: none;
           border-color: ${this._getFocusBorderColor(validationState)};
           box-shadow: 0 0 0 3px ${this._getFocusBoxShadowColor(validationState)};
         }
 
-        .hcm-select__trigger--open {
+        .rdm-select__trigger--open {
           border-color: ${this._getFocusBorderColor(validationState)};
           box-shadow: 0 0 0 3px ${this._getFocusBoxShadowColor(validationState)};
         }
 
-        .hcm-select__trigger--disabled {
+        .rdm-select__trigger--disabled {
           opacity: 0.6;
           cursor: not-allowed;
           background: #f9fafb;
         }
 
-        .hcm-select--small .hcm-select__trigger {
+        .rdm-select--small .rdm-select__trigger {
           padding: 6px 12px;
           font-size: 14px;
           min-height: 36px;
         }
 
-        .hcm-select--medium .hcm-select__trigger {
+        .rdm-select--medium .rdm-select__trigger {
           padding: 8px 16px;
           font-size: 16px;
           min-height: 44px;
         }
 
-        .hcm-select--large .hcm-select__trigger {
+        .rdm-select--large .rdm-select__trigger {
           padding: 12px 20px;
           font-size: 18px;
           min-height: 52px;
         }
 
-        .hcm-select__value {
+        .rdm-select__value {
           flex: 1;
           text-align: left;
           color: #111827;
@@ -224,11 +224,11 @@ class HcmSelect extends HTMLElement {
           white-space: nowrap;
         }
 
-        .hcm-select__placeholder {
+        .rdm-select__placeholder {
           color: #9ca3af;
         }
 
-        .hcm-select__icons {
+        .rdm-select__icons {
           display: flex;
           align-items: center;
           gap: 6px;
@@ -236,7 +236,7 @@ class HcmSelect extends HTMLElement {
           flex-shrink: 0;
         }
 
-        .hcm-select__clear {
+        .rdm-select__clear {
           display: ${clearable && this.value ? 'flex' : 'none'};
           align-items: center;
           justify-content: center;
@@ -253,12 +253,12 @@ class HcmSelect extends HTMLElement {
           flex-shrink: 0;
         }
 
-        .hcm-select__clear:hover {
+        .rdm-select__clear:hover {
           background: #6b7280;
           transform: scale(1.1);
         }
 
-        .hcm-select__arrow {
+        .rdm-select__arrow {
           width: 0;
           height: 0;
           border-left: 5px solid transparent;
@@ -268,35 +268,35 @@ class HcmSelect extends HTMLElement {
           transform: ${this._isOpen ? 'rotate(180deg)' : 'rotate(0deg)'};
         }
 
-        .hcm-select__help-text {
+        .rdm-select__help-text {
           display: ${helpText ? 'block' : 'none'};
           margin-top: 6px;
           font-size: 14px;
           color: #6b7280;
         }
 
-        .hcm-select__message {
+        .rdm-select__message {
           margin-top: 6px;
           font-size: 14px;
           font-weight: 500;
         }
 
-        .hcm-select__message--invalid {
+        .rdm-select__message--invalid {
           display: ${validationState === 'invalid' && invalidText ? 'block' : 'none'};
           color: #ef4444;
         }
 
-        .hcm-select__message--warning {
+        .rdm-select__message--warning {
           display: ${validationState === 'warning' && warningText ? 'block' : 'none'};
           color: #f59e0b;
         }
 
-        .hcm-select__message--success {
+        .rdm-select__message--success {
           display: ${validationState === 'success' && successText ? 'block' : 'none'};
           color: #10b981;
         }
 
-        .hcm-select__validation-icon {
+        .rdm-select__validation-icon {
           width: 20px;
           height: 20px;
           display: ${validationState !== 'default' ? 'flex' : 'none'};
@@ -312,25 +312,25 @@ class HcmSelect extends HTMLElement {
           margin-left: 4px;
         }
 
-        .hcm-select__validation-icon--invalid {
+        .rdm-select__validation-icon--invalid {
           color: #ef4444;
           border-color: #ef4444;
           background: rgba(239, 68, 68, 0.1);
         }
 
-        .hcm-select__validation-icon--warning {
+        .rdm-select__validation-icon--warning {
           color: #f59e0b;
           border-color: #f59e0b;
           background: rgba(245, 158, 11, 0.1);
         }
 
-        .hcm-select__validation-icon--success {
+        .rdm-select__validation-icon--success {
           color: #10b981;
           border-color: #10b981;
           background: rgba(16, 185, 129, 0.1);
         }
 
-        .hcm-select__custom-icon {
+        .rdm-select__custom-icon {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -342,83 +342,83 @@ class HcmSelect extends HTMLElement {
           transition: color 0.2s;
         }
 
-        .hcm-select__custom-icon i,
-        .hcm-select__custom-icon .icon {
+        .rdm-select__custom-icon i,
+        .rdm-select__custom-icon .icon {
           font-size: inherit;
           color: inherit;
           line-height: 1;
         }
 
-        .hcm-select__custom-icon--left {
+        .rdm-select__custom-icon--left {
           margin-right: 8px;
         }
 
-        .hcm-select__custom-icon--right {
+        .rdm-select__custom-icon--right {
           margin-left: 8px;
         }
 
-        .hcm-select__trigger:hover .hcm-select__custom-icon {
+        .rdm-select__trigger:hover .rdm-select__custom-icon {
           color: #374151;
         }
 
-        .hcm-select__trigger--disabled .hcm-select__custom-icon {
+        .rdm-select__trigger--disabled .rdm-select__custom-icon {
           color: #9ca3af;
         }
 
-        .hcm-select__content {
+        .rdm-select__content {
           display: flex;
           align-items: center;
           flex: 1;
           min-width: 0;
         }
 
-        .hcm-select__content--icon-left {
+        .rdm-select__content--icon-left {
           flex-direction: row;
         }
 
-        .hcm-select__content--icon-right {
+        .rdm-select__content--icon-right {
           flex-direction: row;
         }
       </style>
       
-      <div class="hcm-select hcm-select--${size}">
-        <label class="hcm-select__label${label ? '' : ' hcm-select__label--hidden'}${required ? ' hcm-select__label--required' : ''}">${label || ''}</label>
+      <div class="rdm-select rdm-select--${size}">
+        <label class="rdm-select__label${label ? '' : ' rdm-select__label--hidden'}${required ? ' rdm-select__label--required' : ''}">${label || ''}</label>
         
-        <div class="hcm-select__trigger ${this._isOpen ? 'hcm-select__trigger--open' : ''} ${disabled ? 'hcm-select__trigger--disabled' : ''}" 
+        <div class="rdm-select__trigger ${this._isOpen ? 'rdm-select__trigger--open' : ''} ${disabled ? 'rdm-select__trigger--disabled' : ''}" 
              tabindex="${disabled ? '-1' : '0'}" 
              role="combobox" 
              aria-expanded="${this._isOpen}"
              aria-haspopup="listbox">
           
-          <div class="hcm-select__content hcm-select__content--icon-${iconPosition}">
+          <div class="rdm-select__content rdm-select__content--icon-${iconPosition}">
             ${hasIcon && iconPosition === 'left' ? `
-              <div class="hcm-select__custom-icon hcm-select__custom-icon--left">
+              <div class="rdm-select__custom-icon rdm-select__custom-icon--left">
                 ${iconClass ? `<i class="${iconClass}"></i>` : icon}
               </div>
             ` : ''}
-            <span class="hcm-select__value ${this.value ? '' : 'hcm-select__placeholder'}">
+            <span class="rdm-select__value ${this.value ? '' : 'rdm-select__placeholder'}">
               ${this.value ? this._getSelectedLabel() : placeholder}
             </span>
             ${hasIcon && iconPosition === 'right' ? `
-              <div class="hcm-select__custom-icon hcm-select__custom-icon--right">
+              <div class="rdm-select__custom-icon rdm-select__custom-icon--right">
                 ${iconClass ? `<i class="${iconClass}"></i>` : icon}
               </div>
             ` : ''}
           </div>
           
-          <div class="hcm-select__icons">
-            <div class="hcm-select__validation-icon hcm-select__validation-icon--${validationState}">
+          <div class="rdm-select__icons">
+            <div class="rdm-select__validation-icon rdm-select__validation-icon--${validationState}">
               ${this._getValidationIcon(validationState)}
             </div>
-            <div class="hcm-select__clear" title="Clear selection">×</div>
-            <div class="hcm-select__arrow"></div>
+            <div class="rdm-select__clear" title="Clear selection">×</div>
+            <div class="rdm-select__arrow"></div>
           </div>
         </div>
         
-        <div class="hcm-select__help-text">${helpText}</div>
-        <div class="hcm-select__message hcm-select__message--invalid">${invalidText}</div>
-        <div class="hcm-select__message hcm-select__message--warning">${warningText}</div>
-        <div class="hcm-select__message hcm-select__message--success">${successText}</div>
+        <div class="rdm-select__help-text">${helpText}</div>
+        <div class="rdm-select__message rdm-select__message--invalid">${invalidText}</div>
+        <div class="rdm-select__message rdm-select__message--warning">${warningText}</div>
+        <div class="rdm-select__message rdm-select__message--success">${successText}</div>
       </div>
     `;
     
@@ -428,11 +428,11 @@ class HcmSelect extends HTMLElement {
   _renderOptions() {
     if (this._filteredOptions.length === 0) {
       const searchNotFoundText = this.getAttribute('search-not-found-text') || 'No results found';
-      return `<div class="hcm-select__no-results">${searchNotFoundText}</div>`;
+      return `<div class="rdm-select__no-results">${searchNotFoundText}</div>`;
     }
 
     return this._filteredOptions.map(option => `
-      <div class="hcm-select__option ${this.value === option.value ? 'hcm-select__option--selected' : ''}" 
+      <div class="rdm-select__option ${this.value === option.value ? 'rdm-select__option--selected' : ''}" 
            data-value="${option.value}">
         ${option.label}
       </div>
@@ -461,7 +461,7 @@ class HcmSelect extends HTMLElement {
     document.addEventListener('click', this._outsideClickHandler);
 
     // Search input listener
-    const searchInput = this.shadowRoot.querySelector('.hcm-select__search-input');
+    const searchInput = this.shadowRoot.querySelector('.rdm-select__search-input');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         this._searchTerm = e.target.value.toLowerCase();
@@ -476,9 +476,9 @@ class HcmSelect extends HTMLElement {
   _handleClick(event) {
     if (this.hasAttribute('disabled')) return;
 
-    const trigger = event.target.closest('.hcm-select__trigger');
-    const clear = event.target.closest('.hcm-select__clear');
-    const option = event.target.closest('.hcm-select__option');
+    const trigger = event.target.closest('.rdm-select__trigger');
+    const clear = event.target.closest('.rdm-select__clear');
+    const option = event.target.closest('.rdm-select__option');
 
     if (clear) {
       event.stopPropagation();
@@ -555,7 +555,7 @@ class HcmSelect extends HTMLElement {
     
     // Focus search input if available
     setTimeout(() => {
-      const searchInput = this._dropdownPortal?.querySelector('.hcm-select-portal__search-input');
+      const searchInput = this._dropdownPortal?.querySelector('.rdm-select-portal__search-input');
       if (searchInput && this.hasAttribute('search-bar')) {
         searchInput.focus();
       }
@@ -603,7 +603,7 @@ class HcmSelect extends HTMLElement {
   }
 
   _updateOptionsDisplay() {
-    const optionsContainer = this.shadowRoot.querySelector('.hcm-select__options');
+    const optionsContainer = this.shadowRoot.querySelector('.rdm-select__options');
     if (optionsContainer) {
       optionsContainer.innerHTML = this._renderOptions();
     }
@@ -626,7 +626,7 @@ class HcmSelect extends HTMLElement {
   }
 
   _getMultipleSelectionLabel() {
-    const trigger = this.shadowRoot.querySelector('.hcm-select__trigger');
+    const trigger = this.shadowRoot.querySelector('.rdm-select__trigger');
     if (!trigger) {
       // Fallback if trigger not available
       const firstSelected = this._options.find(opt => opt.value === this._selectedValues[0]);
@@ -693,7 +693,7 @@ class HcmSelect extends HTMLElement {
   }
 
   _dispatchChangeEvent() {
-    this.dispatchEvent(new CustomEvent('hcm-select', {
+    this.dispatchEvent(new CustomEvent('rdm-select', {
       detail: { value: this.value },
       bubbles: true
     }));
@@ -713,7 +713,7 @@ class HcmSelect extends HTMLElement {
   }
 
   focus() {
-    const trigger = this.shadowRoot.querySelector('.hcm-select__trigger');
+    const trigger = this.shadowRoot.querySelector('.rdm-select__trigger');
     if (trigger) trigger.focus();
   }
 
@@ -728,10 +728,10 @@ class HcmSelect extends HTMLElement {
     const optionStyle = this.getAttribute('option-style') || 'default'; // default, checkbox, radio
 
     this._dropdownPortal = document.createElement('div');
-    this._dropdownPortal.className = 'hcm-select-portal';
+    this._dropdownPortal.className = 'rdm-select-portal';
     this._dropdownPortal.innerHTML = `
       <style>
-        .hcm-select-portal {
+        .rdm-select-portal {
           position: fixed;
           z-index: 999999;
           background: white;
@@ -743,18 +743,18 @@ class HcmSelect extends HTMLElement {
           min-width: 200px;
         }
 
-        .hcm-select-portal.open {
+        .rdm-select-portal.open {
           /* No animation, just show */
         }
 
-        .hcm-select-portal__search {
+        .rdm-select-portal__search {
           display: ${searchBar ? 'block' : 'none'};
           padding: 12px;
           border-bottom: 1px solid #e5e7eb;
           background: #f9fafb;
         }
 
-        .hcm-select-portal__search-input {
+        .rdm-select-portal__search-input {
           width: 100%;
           padding: 8px 12px;
           border: 1px solid #d1d5db;
@@ -766,17 +766,17 @@ class HcmSelect extends HTMLElement {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        .hcm-select-portal__search-input:focus {
+        .rdm-select-portal__search-input:focus {
           border-color: #3b82f6;
           box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
         }
 
-        .hcm-select-portal__options {
+        .rdm-select-portal__options {
           max-height: 200px;
           overflow-y: auto;
         }
 
-        .hcm-select-portal__option {
+        .rdm-select-portal__option {
           padding: 12px 16px;
           cursor: pointer;
           border-bottom: ${optionBorders ? '1px solid #d1d5db' : 'none'};
@@ -790,22 +790,22 @@ class HcmSelect extends HTMLElement {
           gap: ${optionStyle !== 'default' ? '8px' : '0'};
         }
 
-        .hcm-select-portal__option:last-child {
+        .rdm-select-portal__option:last-child {
           border-bottom: none;
         }
 
-        .hcm-select-portal__option:hover {
+        .rdm-select-portal__option:hover {
           background-color: #eff6ff;
           color: #1d4ed8;
         }
 
-        .hcm-select-portal__option--selected {
+        .rdm-select-portal__option--selected {
           background-color: #dbeafe;
           color: #1e40af;
           font-weight: 500;
         }
 
-        .hcm-select-portal__option--selected::after {
+        .rdm-select-portal__option--selected::after {
           content: ${optionStyle === 'default' ? "'✓'" : "''"};
           float: ${optionStyle === 'default' ? 'right' : 'none'};
           color: #2563eb;
@@ -813,7 +813,7 @@ class HcmSelect extends HTMLElement {
           display: ${optionStyle === 'default' ? 'inline' : 'none'};
         }
 
-        .hcm-select-portal__option-control {
+        .rdm-select-portal__option-control {
           width: 16px;
           height: 16px;
           border: 2px solid #d1d5db;
@@ -824,18 +824,18 @@ class HcmSelect extends HTMLElement {
           transition: all 0.15s;
         }
 
-        .hcm-select-portal__option--selected .hcm-select-portal__option-control {
+        .rdm-select-portal__option--selected .rdm-select-portal__option-control {
           border-color: #3b82f6;
           background: #3b82f6;
         }
 
-        .hcm-select-portal__option--selected .hcm-select-portal__option-control::after {
+        .rdm-select-portal__option--selected .rdm-select-portal__option-control::after {
           content: '';
           position: absolute;
           display: block;
         }
 
-        .hcm-select-portal__option--selected .hcm-select-portal__option-control::after {
+        .rdm-select-portal__option--selected .rdm-select-portal__option-control::after {
           ${optionStyle === 'checkbox' ? `
             left: 3px;
             top: 0px;
@@ -855,13 +855,13 @@ class HcmSelect extends HTMLElement {
           ` : ''}
         }
 
-        .hcm-select-portal__option-text {
+        .rdm-select-portal__option-text {
           flex: 1;
           overflow: hidden;
           text-overflow: ellipsis;
         }
 
-        .hcm-select-portal__no-results {
+        .rdm-select-portal__no-results {
           padding: 20px 16px;
           text-align: center;
           color: #6b7280;
@@ -871,13 +871,13 @@ class HcmSelect extends HTMLElement {
         }
       </style>
       
-      <div class="hcm-select-portal__search">
-        <input class="hcm-select-portal__search-input" 
+      <div class="rdm-select-portal__search">
+        <input class="rdm-select-portal__search-input" 
                type="text" 
                placeholder="${searchBarPlaceholder}">
       </div>
       
-      <div class="hcm-select-portal__options">
+      <div class="rdm-select-portal__options">
         ${this._renderPortalOptions()}
       </div>
     `;
@@ -908,18 +908,18 @@ class HcmSelect extends HTMLElement {
         isSelected = this.value === option.value;
       }
       
-      const selectedClass = isSelected ? 'hcm-select-portal__option--selected' : '';
+      const selectedClass = isSelected ? 'rdm-select-portal__option--selected' : '';
       
       if (optionStyle === 'checkbox' || optionStyle === 'radio') {
         return `
-          <div class="hcm-select-portal__option ${selectedClass}" data-value="${option.value}">
-            <div class="hcm-select-portal__option-control"></div>
-            <span class="hcm-select-portal__option-text">${option.label}</span>
+          <div class="rdm-select-portal__option ${selectedClass}" data-value="${option.value}">
+            <div class="rdm-select-portal__option-control"></div>
+            <span class="rdm-select-portal__option-text">${option.label}</span>
           </div>
         `
       } else {
         return `
-          <div class="hcm-select-portal__option ${selectedClass}" data-value="${option.value}">
+          <div class="rdm-select-portal__option ${selectedClass}" data-value="${option.value}">
             ${option.label}
           </div>
         `;
@@ -932,7 +932,7 @@ class HcmSelect extends HTMLElement {
 
     // Option click events
     this._dropdownPortal.addEventListener('click', (e) => {
-      const option = e.target.closest('.hcm-select-portal__option');
+      const option = e.target.closest('.rdm-select-portal__option');
       if (option) {
         e.stopPropagation(); // Prevent event bubbling
         this._selectOption(option.dataset.value);
@@ -940,7 +940,7 @@ class HcmSelect extends HTMLElement {
     });
 
     // Search input events
-    const searchInput = this._dropdownPortal.querySelector('.hcm-select-portal__search-input');
+    const searchInput = this._dropdownPortal.querySelector('.rdm-select-portal__search-input');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         this._searchTerm = e.target.value.toLowerCase();
@@ -960,7 +960,7 @@ class HcmSelect extends HTMLElement {
   _updatePortalOptionsDisplay() {
     if (!this._dropdownPortal) return;
     
-    const optionsContainer = this._dropdownPortal.querySelector('.hcm-select-portal__options');
+    const optionsContainer = this._dropdownPortal.querySelector('.rdm-select-portal__options');
     if (optionsContainer) {
       optionsContainer.innerHTML = this._renderPortalOptions();
     }
@@ -969,7 +969,7 @@ class HcmSelect extends HTMLElement {
   _positionDropdown() {
     if (!this._dropdownPortal) return;
 
-    const trigger = this.shadowRoot.querySelector('.hcm-select__trigger');
+    const trigger = this.shadowRoot.querySelector('.rdm-select__trigger');
     if (!trigger) return;
 
     const triggerRect = trigger.getBoundingClientRect();
@@ -1091,12 +1091,12 @@ class HcmSelect extends HTMLElement {
   }
 }
 
-// Define hcm-select-option for slotted content
-class HcmSelectOption extends HTMLElement {
+// Define rdm-select-option for slotted content
+class RdmSelectOption extends HTMLElement {
   constructor() {
     super();
   }
 }
 
-customElements.define('hcm-select', HcmSelect);
-customElements.define('hcm-select-option', HcmSelectOption);
+customElements.define('rdm-select', RdmSelect);
+customElements.define('rdm-select-option', RdmSelectOption);

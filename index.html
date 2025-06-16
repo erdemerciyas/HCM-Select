@@ -17,12 +17,12 @@
 
   <section style="max-width: 480px; margin: 0 auto 32px auto; padding: 24px; background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
     <h2 style="font-size: 1.2rem; margin-bottom: 12px; color: #1e293b;">Canlı Demo</h2>
-    <hcm-select label="Ülke Seçin" placeholder="Bir ülke seçin" clearable>
-      <hcm-select-option value="tr">Türkiye</hcm-select-option>
-      <hcm-select-option value="us">Amerika Birleşik Devletleri</hcm-select-option>
-      <hcm-select-option value="de">Almanya</hcm-select-option>
-      <hcm-select-option value="fr">Fransa</hcm-select-option>
-    </hcm-select>
+    <rdm-select label="Ülke Seçin" placeholder="Bir ülke seçin" clearable>
+      <rdm-select-option value="tr">Türkiye</rdm-select-option>
+      <rdm-select-option value="us">Amerika Birleşik Devletleri</rdm-select-option>
+      <rdm-select-option value="de">Almanya</rdm-select-option>
+      <rdm-select-option value="fr">Fransa</rdm-select-option>
+    </rdm-select>
   </section>
 
   <main class="container">
@@ -36,11 +36,11 @@
       <div class="demo-grid">
         <div class="demo-item">
           <h4>JavaScript ile Options</h4>
-          <hcm-select id="basic-select" 
+          <rdm-select id="basic-select" 
             label="Ülke Seçin" 
             placeholder="Bir ülke seçin"
             clearable>
-          </hcm-select>
+          </rdm-select>
           <div class="result" id="basic-result">Seçilen: -</div>
           
           <div class="code-preview">
@@ -50,11 +50,11 @@
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select id="basic-select" 
+              <pre class="code-preview__code">&lt;rdm-select id="basic-select" 
   label="Ülke Seçin" 
   placeholder="Bir ülke seçin"
   clearable&gt;
-&lt;/hcm-select&gt;
+&lt;/rdm-select&gt;
 
 &lt;script&gt;
 const basicSelect = document.getElementById('basic-select');
@@ -71,12 +71,12 @@ basicSelect.options = [
 
         <div class="demo-item">
           <h4>HTML ile Options</h4>
-          <hcm-select label="Şehir Seçin" placeholder="Bir şehir seçin" clearable>
-            <hcm-select-option value="istanbul">İstanbul</hcm-select-option>
-            <hcm-select-option value="ankara">Ankara</hcm-select-option>
-            <hcm-select-option value="izmir">İzmir</hcm-select-option>
-            <hcm-select-option value="bursa">Bursa</hcm-select-option>
-          </hcm-select>
+          <rdm-select label="Şehir Seçin" placeholder="Bir şehir seçin" clearable>
+            <rdm-select-option value="istanbul">İstanbul</rdm-select-option>
+            <rdm-select-option value="ankara">Ankara</rdm-select-option>
+            <rdm-select-option value="izmir">İzmir</rdm-select-option>
+            <rdm-select-option value="bursa">Bursa</rdm-select-option>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -85,15 +85,15 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   label="Şehir Seçin" 
   placeholder="Bir şehir seçin" 
   clearable&gt;
-  &lt;hcm-select-option value="istanbul"&gt;İstanbul&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="ankara"&gt;Ankara&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="izmir"&gt;İzmir&lt;/hcm-select-option&gt;
-  &lt;hcm-select-option value="bursa"&gt;Bursa&lt;/hcm-select-option&gt;
-&lt;/hcm-select&gt;</pre>
+  &lt;rdm-select-option value="istanbul"&gt;İstanbul&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="ankara"&gt;Ankara&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="izmir"&gt;İzmir&lt;/rdm-select-option&gt;
+  &lt;rdm-select-option value="bursa"&gt;Bursa&lt;/rdm-select-option&gt;
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
@@ -105,13 +105,13 @@ basicSelect.options = [
       <div class="demo-grid">
         <div class="demo-item">
           <h4>Küçük Boyut</h4>
-          <hcm-select size="small" 
+          <rdm-select size="small" 
             label="Küçük Select" 
             placeholder="Küçük boyut"
             clearable>
             <option value="1">Seçenek 1</option>
             <option value="2">Seçenek 2</option>
-          </hcm-select>
+          </rdm-select>
           
           <div class="code-preview">
             <div class="code-preview__header">
@@ -120,21 +120,21 @@ basicSelect.options = [
             </div>
             <div class="code-preview__content">
               <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-              <pre class="code-preview__code">&lt;hcm-select 
+              <pre class="code-preview__code">&lt;rdm-select 
   size="small" 
   label="Küçük Select" 
   placeholder="Küçük boyut"
   clearable&gt;
   &lt;option value="1"&gt;Seçenek 1&lt;/option&gt;
   &lt;option value="2"&gt;Seçenek 2&lt;/option&gt;
-&lt;/hcm-select&gt;</pre>
+&lt;/rdm-select&gt;</pre>
             </div>
           </div>
         </div>
 
         <div class="demo-item">
           <h4>Büyük Boyut</h4>
-          <hcm-select size="large" 
+          <rdm-select size="large" 
             label="Büyük Select" 
             placeholder="Büyük boyut"
             clearable>
