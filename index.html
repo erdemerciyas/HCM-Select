@@ -1,40 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <title>HCM Select Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HCM Select Component</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>🎯 HCM Select Component</h1>
-        <p>Baklava Design System'den referans alınarak geliştirilmiş modern select komponenti</p>
-      </div>
+<body>
+  <header style="text-align:center; margin: 32px 0 16px;">
+    <h1>HCM Select Demo</h1>
+    <p>Modern, özelleştirilebilir ve erişilebilir bir select komponenti.<br>Baklava Design System'den ilham alınmıştır.</p>
+    <a href="https://github.com/erdemerciyas/HCM-Select" target="_blank" style="display:inline-block;margin-top:10px;color:#2563eb;font-weight:500;text-decoration:none;">Kaynak kodu: GitHub</a>
+  </header>
 
-  <div class="demo-section">
-    <h3>Temel Kullanım</h3>
-    <div class="demo-grid">
-      <div class="demo-item">
-        <h4>JavaScript ile Options</h4>
-        <hcm-select id="basic-select" 
-          label="Ülke Seçin" 
-          placeholder="Bir ülke seçin"
-          clearable>
-        </hcm-select>
-        <div class="result" id="basic-result">Seçilen: -</div>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML + JavaScript</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select id="basic-select" 
+  <section style="max-width: 480px; margin: 0 auto 32px auto; padding: 24px; background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+    <h2 style="font-size: 1.2rem; margin-bottom: 12px; color: #1e293b;">Canlı Demo</h2>
+    <hcm-select label="Ülke Seçin" placeholder="Bir ülke seçin" clearable>
+      <hcm-select-option value="tr">Türkiye</hcm-select-option>
+      <hcm-select-option value="us">Amerika Birleşik Devletleri</hcm-select-option>
+      <hcm-select-option value="de">Almanya</hcm-select-option>
+      <hcm-select-option value="fr">Fransa</hcm-select-option>
+    </hcm-select>
+  </section>
+
+  <main class="container">
+    <div class="header">
+      <h2>Kullanım ve Özellikler</h2>
+      <p>Farklı varyasyonlar ve tüm özellikler aşağıda örneklenmiştir.</p>
+    </div>
+
+    <div class="demo-section">
+      <h3>Temel Kullanım</h3>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h4>JavaScript ile Options</h4>
+          <hcm-select id="basic-select" 
+            label="Ülke Seçin" 
+            placeholder="Bir ülke seçin"
+            clearable>
+          </hcm-select>
+          <div class="result" id="basic-result">Seçilen: -</div>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML + JavaScript</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select id="basic-select" 
   label="Ülke Seçin" 
   placeholder="Bir ülke seçin"
   clearable&gt;
@@ -49,27 +65,27 @@ basicSelect.options = [
   { value: 'fr', label: 'Fransa' }
 ];
 &lt;/script&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>HTML ile Options</h4>
-        <hcm-select label="Şehir Seçin" placeholder="Bir şehir seçin" clearable>
-          <hcm-select-option value="istanbul">İstanbul</hcm-select-option>
-          <hcm-select-option value="ankara">Ankara</hcm-select-option>
-          <hcm-select-option value="izmir">İzmir</hcm-select-option>
-          <hcm-select-option value="bursa">Bursa</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>HTML ile Options</h4>
+          <hcm-select label="Şehir Seçin" placeholder="Bir şehir seçin" clearable>
+            <hcm-select-option value="istanbul">İstanbul</hcm-select-option>
+            <hcm-select-option value="ankara">Ankara</hcm-select-option>
+            <hcm-select-option value="izmir">İzmir</hcm-select-option>
+            <hcm-select-option value="bursa">Bursa</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="Şehir Seçin" 
   placeholder="Bir şehir seçin" 
   clearable&gt;
@@ -78,33 +94,33 @@ basicSelect.options = [
   &lt;hcm-select-option value="izmir"&gt;İzmir&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="bursa"&gt;Bursa&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="demo-section">
-    <h3>Boyutlar ve Durumlar</h3>
-    <div class="demo-grid">
-      <div class="demo-item">
-        <h4>Küçük Boyut</h4>
-        <hcm-select size="small" 
-          label="Küçük Select" 
-          placeholder="Küçük boyut"
-          clearable>
-          <option value="1">Seçenek 1</option>
-          <option value="2">Seçenek 2</option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+    <div class="demo-section">
+      <h3>Boyutlar ve Durumlar</h3>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h4>Küçük Boyut</h4>
+          <hcm-select size="small" 
+            label="Küçük Select" 
+            placeholder="Küçük boyut"
+            clearable>
+            <option value="1">Seçenek 1</option>
+            <option value="2">Seçenek 2</option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   size="small" 
   label="Küçük Select" 
   placeholder="Küçük boyut"
@@ -112,28 +128,28 @@ basicSelect.options = [
   &lt;option value="1"&gt;Seçenek 1&lt;/option&gt;
   &lt;option value="2"&gt;Seçenek 2&lt;/option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Büyük Boyut</h4>
-        <hcm-select size="large" 
-          label="Büyük Select" 
-          placeholder="Büyük boyut"
-          clearable>
-          <option value="1">Seçenek 1</option>
-          <option value="2">Seçenek 2</option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Büyük Boyut</h4>
+          <hcm-select size="large" 
+            label="Büyük Select" 
+            placeholder="Büyük boyut"
+            clearable>
+            <option value="1">Seçenek 1</option>
+            <option value="2">Seçenek 2</option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   size="large" 
   label="Büyük Select" 
   placeholder="Büyük boyut"
@@ -141,88 +157,86 @@ basicSelect.options = [
   &lt;option value="1"&gt;Seçenek 1&lt;/option&gt;
   &lt;option value="2"&gt;Seçenek 2&lt;/option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Devre Dışı</h4>
-        <hcm-select disabled 
-          label="Devre Dışı Select" 
-          placeholder="Kullanılamaz">
-          <option value="1">Seçenek 1</option>
-        </hcm-select>
-      </div>
+        <div class="demo-item">
+          <h4>Devre Dışı</h4>
+          <hcm-select disabled 
+            label="Devre Dışı Select" 
+            placeholder="Kullanılamaz">
+            <option value="1">Seçenek 1</option>
+          </hcm-select>
+        </div>
 
-      <div class="demo-item">
-        <h4>Label Olmadan</h4>
-        <hcm-select 
-          placeholder="Sadece placeholder"
-          clearable>
-          <hcm-select-option value="opt1">Seçenek 1</hcm-select-option>
-          <hcm-select-option value="opt2">Seçenek 2</hcm-select-option>
-          <hcm-select-option value="opt3">Seçenek 3</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Label Olmadan</h4>
+          <hcm-select 
+            placeholder="Sadece placeholder"
+            clearable>
+            <hcm-select-option value="opt1">Seçenek 1</hcm-select-option>
+            <hcm-select-option value="opt2">Seçenek 2</hcm-select-option>
+            <hcm-select-option value="opt3">Seçenek 3</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   placeholder="Sadece placeholder"
   clearable&gt;
   &lt;hcm-select-option value="opt1"&gt;Seçenek 1&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="opt2"&gt;Seçenek 2&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="opt3"&gt;Seçenek 3&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Hata Durumu</h4>
-        <hcm-select label="Gerekli Alan" 
-          placeholder="Seçim yapın"
-          required
-          invalid-text="Bu alan zorunludur!"
-          clearable>
-          <option value="1">Seçenek 1</option>
-          <option value="2">Seçenek 2</option>
-        </hcm-select>
+        <div class="demo-item">
+          <h4>Hata Durumu</h4>
+          <hcm-select label="Gerekli Alan" 
+            placeholder="Seçim yapın"
+            required
+            invalid-text="Bu alan zorunludur!"
+            clearable>
+            <option value="1">Seçenek 1</option>
+            <option value="2">Seçenek 2</option>
+          </hcm-select>
+        </div>
       </div>
     </div>
-  </div>
 
-
-
-  <!-- Icon Örnekleri -->
-  <div class="demo-section">
-    <h3>Icon Örnekleri</h3>
-    <div class="demo-grid">
-      <div class="demo-item">
-        <h4>Sol Icon</h4>
-        <hcm-select 
-          label="Ülke Seçin" 
-          placeholder="Ülke seçin"
-          icon="🌍"
-          icon-position="left">
-          <hcm-select-option value="tr">Türkiye</hcm-select-option>
-          <hcm-select-option value="us">Amerika</hcm-select-option>
-          <hcm-select-option value="de">Almanya</hcm-select-option>
-          <hcm-select-option value="fr">Fransa</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+    <!-- Icon Örnekleri -->
+    <div class="demo-section">
+      <h3>Icon Örnekleri</h3>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h4>Sol Icon</h4>
+          <hcm-select 
+            label="Ülke Seçin" 
+            placeholder="Ülke seçin"
+            icon="🌍"
+            icon-position="left">
+            <hcm-select-option value="tr">Türkiye</hcm-select-option>
+            <hcm-select-option value="us">Amerika</hcm-select-option>
+            <hcm-select-option value="de">Almanya</hcm-select-option>
+            <hcm-select-option value="fr">Fransa</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="Ülke Seçin" 
   placeholder="Ülke seçin"
   icon="🌍"
@@ -232,30 +246,30 @@ basicSelect.options = [
   &lt;hcm-select-option value="de"&gt;Almanya&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="fr"&gt;Fransa&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Sağ Icon</h4>
-        <hcm-select 
-          label="Kategori" 
-          placeholder="Kategori seçin"
-          icon="📁"
-          icon-position="right">
-          <hcm-select-option value="tech">Teknoloji</hcm-select-option>
-          <hcm-select-option value="design">Tasarım</hcm-select-option>
-          <hcm-select-option value="marketing">Pazarlama</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Sağ Icon</h4>
+          <hcm-select 
+            label="Kategori" 
+            placeholder="Kategori seçin"
+            icon="📁"
+            icon-position="right">
+            <hcm-select-option value="tech">Teknoloji</hcm-select-option>
+            <hcm-select-option value="design">Tasarım</hcm-select-option>
+            <hcm-select-option value="marketing">Pazarlama</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="Kategori" 
   placeholder="Kategori seçin"
   icon="📁"
@@ -264,31 +278,31 @@ basicSelect.options = [
   &lt;hcm-select-option value="design"&gt;Tasarım&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="marketing"&gt;Pazarlama&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Kullanıcı Icon (Font Awesome)</h4>
-        <hcm-select 
-          label="Kullanıcı Tipi" 
-          placeholder="Tip seçin"
-          icon-class="fas fa-user"
-          icon-position="left"
-          size="large">
-          <hcm-select-option value="admin">Admin</hcm-select-option>
-          <hcm-select-option value="user">Kullanıcı</hcm-select-option>
-          <hcm-select-option value="guest">Misafir</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Kullanıcı Icon (Font Awesome)</h4>
+          <hcm-select 
+            label="Kullanıcı Tipi" 
+            placeholder="Tip seçin"
+            icon-class="fas fa-user"
+            icon-position="left"
+            size="large">
+            <hcm-select-option value="admin">Admin</hcm-select-option>
+            <hcm-select-option value="user">Kullanıcı</hcm-select-option>
+            <hcm-select-option value="guest">Misafir</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="Kullanıcı Tipi" 
   placeholder="Tip seçin"
   icon-class="fas fa-user"
@@ -298,32 +312,32 @@ basicSelect.options = [
   &lt;hcm-select-option value="user"&gt;Kullanıcı&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="guest"&gt;Misafir&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Para Birimi (Font Awesome)</h4>
-        <hcm-select 
-          label="Para Birimi" 
-          placeholder="Para birimi seçin"
-          icon-class="fas fa-dollar-sign"
-          icon-position="left"
-          clearable>
-          <hcm-select-option value="try">TRY - Türk Lirası</hcm-select-option>
-          <hcm-select-option value="usd">USD - Amerikan Doları</hcm-select-option>
-          <hcm-select-option value="eur">EUR - Euro</hcm-select-option>
-          <hcm-select-option value="gbp">GBP - İngiliz Sterlini</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Para Birimi (Font Awesome)</h4>
+          <hcm-select 
+            label="Para Birimi" 
+            placeholder="Para birimi seçin"
+            icon-class="fas fa-dollar-sign"
+            icon-position="left"
+            clearable>
+            <hcm-select-option value="try">TRY - Türk Lirası</hcm-select-option>
+            <hcm-select-option value="usd">USD - Amerikan Doları</hcm-select-option>
+            <hcm-select-option value="eur">EUR - Euro</hcm-select-option>
+            <hcm-select-option value="gbp">GBP - İngiliz Sterlini</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="Para Birimi" 
   placeholder="Para birimi seçin"
   icon-class="fas fa-dollar-sign"
@@ -334,32 +348,32 @@ basicSelect.options = [
   &lt;hcm-select-option value="eur"&gt;EUR - Euro&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="gbp"&gt;GBP - İngiliz Sterlini&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Zaman Dilimi (Sağ Icon)</h4>
-        <hcm-select 
-          label="Zaman Dilimi" 
-          placeholder="Zaman dilimi seçin"
-          icon-class="fas fa-clock"
-          icon-position="right"
-          search-bar>
-          <hcm-select-option value="ist">İstanbul (UTC+3)</hcm-select-option>
-          <hcm-select-option value="utc">UTC (UTC+0)</hcm-select-option>
-          <hcm-select-option value="est">New York (UTC-5)</hcm-select-option>
-          <hcm-select-option value="pst">Los Angeles (UTC-8)</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Zaman Dilimi (Sağ Icon)</h4>
+          <hcm-select 
+            label="Zaman Dilimi" 
+            placeholder="Zaman dilimi seçin"
+            icon-class="fas fa-clock"
+            icon-position="right"
+            search-bar>
+            <hcm-select-option value="ist">İstanbul (UTC+3)</hcm-select-option>
+            <hcm-select-option value="utc">UTC (UTC+0)</hcm-select-option>
+            <hcm-select-option value="est">New York (UTC-5)</hcm-select-option>
+            <hcm-select-option value="pst">Los Angeles (UTC-8)</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="Zaman Dilimi" 
   placeholder="Zaman dilimi seçin"
   icon-class="fas fa-clock"
@@ -370,31 +384,31 @@ basicSelect.options = [
   &lt;hcm-select-option value="est"&gt;New York (UTC-5)&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="pst"&gt;Los Angeles (UTC-8)&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>E-posta (Label Olmadan)</h4>
-        <hcm-select 
-          placeholder="E-posta sağlayıcısı seçin"
-          icon-class="fas fa-envelope"
-          icon-position="left"
-          clearable>
-          <hcm-select-option value="gmail">Gmail</hcm-select-option>
-          <hcm-select-option value="outlook">Outlook</hcm-select-option>
-          <hcm-select-option value="yahoo">Yahoo Mail</hcm-select-option>
-          <hcm-select-option value="icloud">iCloud Mail</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>E-posta (Label Olmadan)</h4>
+          <hcm-select 
+            placeholder="E-posta sağlayıcısı seçin"
+            icon-class="fas fa-envelope"
+            icon-position="left"
+            clearable>
+            <hcm-select-option value="gmail">Gmail</hcm-select-option>
+            <hcm-select-option value="outlook">Outlook</hcm-select-option>
+            <hcm-select-option value="yahoo">Yahoo Mail</hcm-select-option>
+            <hcm-select-option value="icloud">iCloud Mail</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   placeholder="E-posta sağlayıcısı seçin"
   icon-class="fas fa-envelope"
   icon-position="left"
@@ -404,34 +418,34 @@ basicSelect.options = [
   &lt;hcm-select-option value="yahoo"&gt;Yahoo Mail&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="icloud"&gt;iCloud Mail&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Çoklu Seçim + Icon</h4>
-        <hcm-select 
-          label="Diller" 
-          placeholder="Dil seçin"
-          icon="🗣️"
-          icon-position="left"
-          multiple
-          option-style="checkbox">
-          <hcm-select-option value="tr">Türkçe</hcm-select-option>
-          <hcm-select-option value="en">English</hcm-select-option>
-          <hcm-select-option value="de">Deutsch</hcm-select-option>
-          <hcm-select-option value="fr">Français</hcm-select-option>
-          <hcm-select-option value="es">Español</hcm-select-option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Çoklu Seçim + Icon</h4>
+          <hcm-select 
+            label="Diller" 
+            placeholder="Dil seçin"
+            icon="🗣️"
+            icon-position="left"
+            multiple
+            option-style="checkbox">
+            <hcm-select-option value="tr">Türkçe</hcm-select-option>
+            <hcm-select-option value="en">English</hcm-select-option>
+            <hcm-select-option value="de">Deutsch</hcm-select-option>
+            <hcm-select-option value="fr">Français</hcm-select-option>
+            <hcm-select-option value="es">Español</hcm-select-option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="Diller" 
   placeholder="Dil seçin"
   icon="🗣️"
@@ -444,36 +458,36 @@ basicSelect.options = [
   &lt;hcm-select-option value="fr"&gt;Français&lt;/hcm-select-option&gt;
   &lt;hcm-select-option value="es"&gt;Español&lt;/hcm-select-option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="demo-section">
-    <h3>Validation Durumları</h3>
-    <div class="demo-grid">
-      <div class="demo-item">
-        <h4>Hata Durumu</h4>
-        <hcm-select label="E-posta Adresi" 
-          placeholder="E-posta girin"
-          required
-          validation-state="invalid"
-          invalid-text="Geçerli bir e-posta adresi girin!"
-          clearable>
-          <option value="invalid@">invalid@</option>
-          <option value="test@example.com">test@example.com</option>
-          <option value="user@domain.org">user@domain.org</option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+    <div class="demo-section">
+      <h3>Validation Durumları</h3>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h4>Hata Durumu</h4>
+          <hcm-select label="E-posta Adresi" 
+            placeholder="E-posta girin"
+            required
+            validation-state="invalid"
+            invalid-text="Geçerli bir e-posta adresi girin!"
+            clearable>
+            <option value="invalid@">invalid@</option>
+            <option value="test@example.com">test@example.com</option>
+            <option value="user@domain.org">user@domain.org</option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="E-posta Adresi" 
   placeholder="E-posta girin"
   required
@@ -484,30 +498,30 @@ basicSelect.options = [
   &lt;option value="test@example.com"&gt;test@example.com&lt;/option&gt;
   &lt;option value="user@domain.org"&gt;user@domain.org&lt;/option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Uyarı Durumu</h4>
-        <hcm-select label="Şifre Gücü" 
-          placeholder="Şifre gücü seçin"
-          validation-state="warning"
-          warning-text="Güçlü şifre önerilir!"
-          clearable>
-          <option value="weak">Zayıf</option>
-          <option value="medium">Orta</option>
-          <option value="strong">Güçlü</option>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Uyarı Durumu</h4>
+          <hcm-select label="Şifre Gücü" 
+            placeholder="Şifre gücü seçin"
+            validation-state="warning"
+            warning-text="Güçlü şifre önerilir!"
+            clearable>
+            <option value="weak">Zayıf</option>
+            <option value="medium">Orta</option>
+            <option value="strong">Güçlü</option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   label="Şifre Gücü" 
   placeholder="Şifre gücü seçin"
   validation-state="warning"
@@ -517,86 +531,86 @@ basicSelect.options = [
   &lt;option value="medium"&gt;Orta&lt;/option&gt;
   &lt;option value="strong"&gt;Güçlü&lt;/option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Başarı Durumu</h4>
-        <hcm-select label="Doğrulama Durumu" 
-          placeholder="Durum seçin"
-          validation-state="success"
-          success-text="Başarıyla doğrulandı!"
-          value="verified"
-          clearable>
-          <option value="pending">Beklemede</option>
-          <option value="verified">Doğrulandı</option>
-          <option value="rejected">Reddedildi</option>
-        </hcm-select>
-      </div>
+        <div class="demo-item">
+          <h4>Başarı Durumu</h4>
+          <hcm-select label="Doğrulama Durumu" 
+            placeholder="Durum seçin"
+            validation-state="success"
+            success-text="Başarıyla doğrulandı!"
+            value="verified"
+            clearable>
+            <option value="pending">Beklemede</option>
+            <option value="verified">Doğrulandı</option>
+            <option value="rejected">Reddedildi</option>
+          </hcm-select>
+        </div>
 
-      <div class="demo-item">
-        <h4>Zorunlu Alan</h4>
-        <hcm-select label="Ülke" 
-          placeholder="Ülke seçin"
-          required
-          help-text="Bu alan zorunludur"
-          clearable>
-          <option value="tr">Türkiye</option>
-          <option value="us">Amerika</option>
-          <option value="de">Almanya</option>
-        </hcm-select>
-      </div>
+        <div class="demo-item">
+          <h4>Zorunlu Alan</h4>
+          <hcm-select label="Ülke" 
+            placeholder="Ülke seçin"
+            required
+            help-text="Bu alan zorunludur"
+            clearable>
+            <option value="tr">Türkiye</option>
+            <option value="us">Amerika</option>
+            <option value="de">Almanya</option>
+          </hcm-select>
+        </div>
 
-      <div class="demo-item">
-        <h4>Custom Mesajlar</h4>
-        <hcm-select label="Özel Validation" 
-          placeholder="Seçim yapın"
-          validation-state="invalid"
-          invalid-text="Özel hata mesajı: Bu seçim geçersiz!"
-          clearable>
-          <option value="option1">Seçenek 1</option>
-          <option value="option2">Seçenek 2</option>
-        </hcm-select>
-      </div>
+        <div class="demo-item">
+          <h4>Custom Mesajlar</h4>
+          <hcm-select label="Özel Validation" 
+            placeholder="Seçim yapın"
+            validation-state="invalid"
+            invalid-text="Özel hata mesajı: Bu seçim geçersiz!"
+            clearable>
+            <option value="option1">Seçenek 1</option>
+            <option value="option2">Seçenek 2</option>
+          </hcm-select>
+        </div>
 
-      <div class="demo-item">
-        <h4>Dinamik Validation</h4>
-        <hcm-select id="dynamic-validation"
-          label="Dinamik Durum" 
-          placeholder="Bir seçenek seçin"
-          help-text="Seçiminize göre validation değişir"
-          clearable>
-          <option value="good">İyi Seçim</option>
-          <option value="warning">Uyarı Seçimi</option>
-          <option value="bad">Kötü Seçim</option>
-        </hcm-select>
+        <div class="demo-item">
+          <h4>Dinamik Validation</h4>
+          <hcm-select id="dynamic-validation"
+            label="Dinamik Durum" 
+            placeholder="Bir seçenek seçin"
+            help-text="Seçiminize göre validation değişir"
+            clearable>
+            <option value="good">İyi Seçim</option>
+            <option value="warning">Uyarı Seçimi</option>
+            <option value="bad">Kötü Seçim</option>
+          </hcm-select>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="demo-section">
-    <h3>Gelişmiş Özellikler</h3>
-    <div class="demo-grid">
-      <div class="demo-item">
-        <h4>Arama Özellikli</h4>
-        <hcm-select id="search-select"
-          label="Programlama Dili" 
-          placeholder="Dil seçin"
-          search-bar
-          search-bar-placeholder="Dil ara..."
-          search-not-found-text="Sonuç bulunamadı"
-          clearable>
-        </hcm-select>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML + JavaScript</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select id="search-select"
+    <div class="demo-section">
+      <h3>Gelişmiş Özellikler</h3>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h4>Arama Özellikli</h4>
+          <hcm-select id="search-select"
+            label="Programlama Dili" 
+            placeholder="Dil seçin"
+            search-bar
+            search-bar-placeholder="Dil ara..."
+            search-not-found-text="Sonuç bulunamadı"
+            clearable>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML + JavaScript</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select id="search-select"
   label="Programlama Dili" 
   placeholder="Dil seçin"
   search-bar
@@ -612,84 +626,91 @@ searchSelect.options = [
   { value: 'ts', label: 'TypeScript' },
   { value: 'py', label: 'Python' },
   { value: 'java', label: 'Java' },
-  { value: 'cs', label: 'C#' }
+  { value: 'cs', label: 'C#' },
+  { value: 'cpp', label: 'C++' },
+  { value: 'php', label: 'PHP' },
+  { value: 'ruby', label: 'Ruby' },
+  { value: 'go', label: 'Go' },
+  { value: 'rust', label: 'Rust' },
+  { value: 'swift', label: 'Swift' },
+  { value: 'kotlin', label: 'Kotlin' }
 ];
 &lt;/script&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="demo-item">
-        <h4>Yardım Metni ile</h4>
-        <hcm-select label="Deneyim Seviyesi" 
-          placeholder="Seviye seçin"
-          help-text="Mevcut deneyim seviyenizi seçin"
-          clearable>
-          <hcm-select-option value="beginner">Başlangıç</hcm-select-option>
-          <hcm-select-option value="intermediate">Orta</hcm-select-option>
-          <hcm-select-option value="advanced">İleri</hcm-select-option>
-          <hcm-select-option value="expert">Uzman</hcm-select-option>
-        </hcm-select>
+        <div class="demo-item">
+          <h4>Yardım Metni ile</h4>
+          <hcm-select label="Deneyim Seviyesi" 
+            placeholder="Seviye seçin"
+            help-text="Mevcut deneyim seviyenizi seçin"
+            clearable>
+            <hcm-select-option value="beginner">Başlangıç</hcm-select-option>
+            <hcm-select-option value="intermediate">Orta</hcm-select-option>
+            <hcm-select-option value="advanced">İleri</hcm-select-option>
+            <hcm-select-option value="expert">Uzman</hcm-select-option>
+          </hcm-select>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="demo-section">
-    <h3>Option Borders</h3>
-    <div class="demo-grid">
-      <div class="demo-item">
-        <h4>Border Olmadan (Varsayılan)</h4>
-        <hcm-select name="no-borders" 
-          label="Standart Görünüm"
-          placeholder="Seçenek seçin">
-          <hcm-select-option value="option1">Seçenek 1</hcm-select-option>
-          <hcm-select-option value="option2">Seçenek 2</hcm-select-option>
-          <hcm-select-option value="option3">Seçenek 3</hcm-select-option>
-          <hcm-select-option value="option4">Seçenek 4</hcm-select-option>
-        </hcm-select>
-      </div>
-      
-      <div class="demo-item">
-        <h4>Border ile</h4>
-        <hcm-select name="with-borders" 
-          label="Çizgili Görünüm"
-          placeholder="Seçenek seçin" 
-          option-borders>
-          <hcm-select-option value="option1">Seçenek 1</hcm-select-option>
-          <hcm-select-option value="option2">Seçenek 2</hcm-select-option>
-          <hcm-select-option value="option3">Seçenek 3</hcm-select-option>
-          <hcm-select-option value="option4">Seçenek 4</hcm-select-option>
-        </hcm-select>
-      </div>
-    </div>
-  </div>
-
-  <div class="demo-section">
-    <h3>Option Stilleri</h3>
-    <div class="demo-grid">
-      <div class="demo-item">
-        <h4>Checkbox Stili</h4>
-        <hcm-select name="checkbox-style" 
-          label="Checkbox Görünüm"
-          placeholder="Seçenekleri işaretle" 
-          option-style="checkbox"
-          multiple>
-          <option value="html">HTML</option>
-          <option value="css">CSS</option>
-          <option value="js">JavaScript</option>
-          <option value="react">React</option>
-          <option value="vue">Vue.js</option>
-          <option value="angular">Angular</option>
-        </hcm-select>
+    <div class="demo-section">
+      <h3>Option Borders</h3>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h4>Border Olmadan (Varsayılan)</h4>
+          <hcm-select name="no-borders" 
+            label="Standart Görünüm"
+            placeholder="Seçenek seçin">
+            <hcm-select-option value="option1">Seçenek 1</hcm-select-option>
+            <hcm-select-option value="option2">Seçenek 2</hcm-select-option>
+            <hcm-select-option value="option3">Seçenek 3</hcm-select-option>
+            <hcm-select-option value="option4">Seçenek 4</hcm-select-option>
+          </hcm-select>
+        </div>
         
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
-          </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;hcm-select 
+        <div class="demo-item">
+          <h4>Border ile</h4>
+          <hcm-select name="with-borders" 
+            label="Çizgili Görünüm"
+            placeholder="Seçenek seçin" 
+            option-borders>
+            <hcm-select-option value="option1">Seçenek 1</hcm-select-option>
+            <hcm-select-option value="option2">Seçenek 2</hcm-select-option>
+            <hcm-select-option value="option3">Seçenek 3</hcm-select-option>
+            <hcm-select-option value="option4">Seçenek 4</hcm-select-option>
+          </hcm-select>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h3>Option Stilleri</h3>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h4>Checkbox Stili</h4>
+          <hcm-select name="checkbox-style" 
+            label="Checkbox Görünüm"
+            placeholder="Seçenekleri işaretle" 
+            option-style="checkbox"
+            multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+            <option value="react">React</option>
+            <option value="vue">Vue.js</option>
+            <option value="angular">Angular</option>
+          </hcm-select>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;hcm-select 
   name="checkbox-style" 
   label="Checkbox Görünüm"
   placeholder="Seçenekleri işaretle" 
@@ -702,90 +723,90 @@ searchSelect.options = [
   &lt;option value="vue"&gt;Vue.js&lt;/option&gt;
   &lt;option value="angular"&gt;Angular&lt;/option&gt;
 &lt;/hcm-select&gt;</pre>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="demo-item">
-        <h4>Radio Stili</h4>
-        <hcm-select name="radio-style" 
-          label="Radio Görünüm"
-          placeholder="Bir seçenek seç" 
-          option-style="radio">
-          <option value="beginner">Başlangıç</option>
-          <option value="intermediate">Orta</option>
-          <option value="advanced">İleri</option>
-          <option value="expert">Uzman</option>
-          <option value="master">Master</option>
-        </hcm-select>
-      </div>
+        
+        <div class="demo-item">
+          <h4>Radio Stili</h4>
+          <hcm-select name="radio-style" 
+            label="Radio Görünüm"
+            placeholder="Bir seçenek seç" 
+            option-style="radio">
+            <option value="beginner">Başlangıç</option>
+            <option value="intermediate">Orta</option>
+            <option value="advanced">İleri</option>
+            <option value="expert">Uzman</option>
+            <option value="master">Master</option>
+          </hcm-select>
+        </div>
 
-      <div class="demo-item">
-        <h4>Checkbox + Border</h4>
-        <hcm-select name="checkbox-border" 
-          label="Checkbox + Çizgi"
-          placeholder="Çoklu seçim" 
-          option-style="checkbox"
-          option-borders
-          multiple>
-          <option value="frontend">Frontend Development</option>
-          <option value="backend">Backend Development</option>
-          <option value="fullstack">Full Stack Development</option>
-          <option value="mobile">Mobile Development</option>
-          <option value="devops">DevOps</option>
-          <option value="ui">UI/UX Design</option>
-        </hcm-select>
-      </div>
+        <div class="demo-item">
+          <h4>Checkbox + Border</h4>
+          <hcm-select name="checkbox-border" 
+            label="Checkbox + Çizgi"
+            placeholder="Çoklu seçim" 
+            option-style="checkbox"
+            option-borders
+            multiple>
+            <option value="frontend">Frontend Development</option>
+            <option value="backend">Backend Development</option>
+            <option value="fullstack">Full Stack Development</option>
+            <option value="mobile">Mobile Development</option>
+            <option value="devops">DevOps</option>
+            <option value="ui">UI/UX Design</option>
+          </hcm-select>
+        </div>
 
-      <div class="demo-item">
-        <h4>Radio + Border</h4>
-        <hcm-select name="radio-border" 
-          label="Radio + Çizgi"
-          placeholder="Tek seçim" 
-          option-style="radio"
-          option-borders>
-          <option value="junior">Junior Developer</option>
-          <option value="mid">Mid-Level Developer</option>
-          <option value="senior">Senior Developer</option>
-          <option value="lead">Lead Developer</option>
-          <option value="architect">Software Architect</option>
-          <option value="manager">Engineering Manager</option>
-        </hcm-select>
+        <div class="demo-item">
+          <h4>Radio + Border</h4>
+          <hcm-select name="radio-border" 
+            label="Radio + Çizgi"
+            placeholder="Tek seçim" 
+            option-style="radio"
+            option-borders>
+            <option value="junior">Junior Developer</option>
+            <option value="mid">Mid-Level Developer</option>
+            <option value="senior">Senior Developer</option>
+            <option value="lead">Lead Developer</option>
+            <option value="architect">Software Architect</option>
+            <option value="manager">Engineering Manager</option>
+          </hcm-select>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="demo-section">
-    <h3>Programatik Kontrol</h3>
-    <div class="demo-grid">
-      <div class="demo-item">
-        <h4>API Metodları</h4>
-        <hcm-select id="api-select" 
-          label="Kontrol Edilebilir Select" 
-          placeholder="Seçim yapın"
-          clearable>
-          <hcm-select-option value="red">Kırmızı</hcm-select-option>
-          <hcm-select-option value="green">Yeşil</hcm-select-option>
-          <hcm-select-option value="blue">Mavi</hcm-select-option>
-        </hcm-select>
-        
-        <div class="button-group">
-          <button class="btn" onclick="apiSelect.open()">Aç</button>
-          <button class="btn" onclick="apiSelect.close()">Kapat</button>
-          <button class="btn" onclick="apiSelect.value = 'green'">Yeşil Seç</button>
-          <button class="btn" onclick="apiSelect.clear()">Temizle</button>
-        </div>
-        
-        <div class="result" id="api-result">Seçilen: -</div>
-        
-        <div class="code-preview">
-          <div class="code-preview__header">
-            <h5 class="code-preview__title">HTML + JavaScript Kodu</h5>
-            <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+    <div class="demo-section">
+      <h3>Programatik Kontrol</h3>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h4>API Metodları</h4>
+          <hcm-select id="api-select" 
+            label="Kontrol Edilebilir Select" 
+            placeholder="Seçim yapın"
+            clearable>
+            <hcm-select-option value="red">Kırmızı</hcm-select-option>
+            <hcm-select-option value="green">Yeşil</hcm-select-option>
+            <hcm-select-option value="blue">Mavi</hcm-select-option>
+          </hcm-select>
+          
+          <div class="button-group">
+            <button class="btn" onclick="apiSelect.open()">Aç</button>
+            <button class="btn" onclick="apiSelect.close()">Kapat</button>
+            <button class="btn" onclick="apiSelect.value = 'green'">Yeşil Seç</button>
+            <button class="btn" onclick="apiSelect.clear()">Temizle</button>
           </div>
-          <div class="code-preview__content">
-            <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
-            <pre class="code-preview__code">&lt;!-- HTML --&gt;
+          
+          <div class="result" id="api-result">Seçilen: -</div>
+          
+          <div class="code-preview">
+            <div class="code-preview__header">
+              <h5 class="code-preview__title">HTML + JavaScript Kodu</h5>
+              <button class="code-preview__toggle" onclick="toggleCodePreview(this)">⌨️ Kod</button>
+            </div>
+            <div class="code-preview__content">
+              <button class="code-preview__copy" onclick="copyCode(this)">📋 Kopyala</button>
+              <pre class="code-preview__code">&lt;!-- HTML --&gt;
 &lt;hcm-select id="api-select" 
   label="Kontrol Edilebilir Select" 
   placeholder="Seçim yapın"
@@ -810,15 +831,18 @@ apiSelect.addEventListener('hcm-select', (e) =&gt; {
   console.log('Seçilen değer:', e.detail.value);
 });
 &lt;/script&gt;</pre>
+            </div>
           </div>
         </div>
       </div>
-          </div>
     </div>
-    
-    </div> <!-- container -->
+  </main>
 
-    <script src="hcm-select.js"></script>
+  <footer style="text-align:center; margin: 40px 0 16px; color: #64748b; font-size: 15px;">
+    <span>© 2024 HCM Select | <a href="https://github.com/erdemerciyas/HCM-Select" target="_blank" style="color:#2563eb;">GitHub</a></span>
+  </footer>
+
+  <script src="hcm-select.js"></script>
   <script>
     // Temel select için options ayarla
     const basicSelect = document.getElementById('basic-select');
@@ -1030,6 +1054,5 @@ apiSelect.addEventListener('hcm-select', (e) =&gt; {
       </code>
     </div>
   </div>
-
 </body>
 </html> 
