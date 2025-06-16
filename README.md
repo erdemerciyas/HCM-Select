@@ -1,6 +1,6 @@
-# 🎯 HCM Select Component
+# 🎯 HCM Select Component.
 
-Modern, özelleştirilebilir ve erişilebilir select komponenti. Baklava Design System'den referans alınarak geliştirilmiştir.
+Modern, özelleştirilebilir ve erişilebilir select komponenti.
 
 ## ✨ Özellikler
 
@@ -249,7 +249,6 @@ MIT License - detaylar için [LICENSE](LICENSE) dosyasına bakın.
 
 ## 🙏 Teşekkürler
 
-- [Baklava Design System](https://github.com/Trendyol/baklava) - Tasarım referansı
 - [Font Awesome](https://fontawesome.com/) - Icon desteği
 - Web Components standartları
 
