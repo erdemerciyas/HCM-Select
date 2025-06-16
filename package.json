@@ -1,0 +1,51 @@
+{
+  "name": "hcm-select",
+  "version": "1.0.0",
+  "description": "Modern, customizable and accessible select component built with Web Components",
+  "main": "hcm-select.js",
+  "files": [
+    "hcm-select.js",
+    "style.css",
+    "index.html",
+    "README.md"
+  ],
+  "keywords": [
+    "select",
+    "dropdown",
+    "web-components",
+    "custom-element",
+    "ui-component",
+    "form",
+    "input",
+    "accessible",
+    "responsive",
+    "modern"
+  ],
+  "author": "HCM Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/hcm-select.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/hcm-select/issues"
+  },
+  "homepage": "https://github.com/your-username/hcm-select#readme",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server -p 8000",
+    "demo": "open index.html"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "browserslist": [
+    "Chrome >= 54",
+    "Firefox >= 63",
+    "Safari >= 10.1",
+    "Edge >= 79"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
