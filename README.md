@@ -14,6 +14,10 @@ Modern, özelleştirilebilir ve erişilebilir select komponenti.
 - 📦 **Çoklu Seçim**: Checkbox ve radio button stilleri
 - 🚀 **Performanslı**: Shadow DOM ve portal rendering
 
+## 👤 Yapımcı
+
+**Erdem Erciyas**
+
 ## 🚀 Hızlı Başlangıç
 
 ### HTML
